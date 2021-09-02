@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		<div class="unterricht u2">
+			
+		</div>
+		<pre class="code">
+			<code>
+			
+			</code>
+		</pre>
+
+	</main>
+	
+<script>
+	var elem = $(".u2")
+
+function createTable(elem, cl, colls, rows) {
+	elem.append("<table class="+cl+"></table>")
+	var table = elem.find("."+cl)
+
+	for(var i=0; i<rows; i++){
+		table.append("<tr class='row_"+i+"'>")
+		for(var j=0; j<colls; j++){
+			table.find("tr.row_"+i).append("<td>content</td>")
+		}
+	}
+}
+createTable(elem, "test_1", 3, 3)
+createTable(elem, "test_2", 4, 4)
+
+
+
+/*
+	$( "tr" ).appendTo( ".test" );
+*/
+
+</script>
+<script src="../js/jScript.js"></script>
+</body>
+</html>

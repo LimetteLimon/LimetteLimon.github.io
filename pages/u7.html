@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		
+		<div class="unterricht u7">
+			
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+	$(".u7").on("click", function(){
+		$(".u7").html("")
+
+		for (let i=0; i<rando(1, 5); i++){
+			var m2e = `<img class="m2€" src="../bilder/u7/m_2€.jpg" alt="2€ картинка" style="top:${rando(150, 550)}px; left:${rando(150, 550)}px;">`
+			$(".u7").append(m2e)
+		}
+		for (let i=0; i<rando(1, 5); i++){
+			var m1e = `<img class="m1€" src="../bilder/u7/m_1€.jpg" alt="11€ картинка" style="top:${rando(150, 550)}px; left:${rando(150, 550)}px;">`
+			$(".u7").append(m1e)
+		}
+		for (let i=0; i<rando(1, 5); i++){
+			var m50c = `<img class="m50c" src="../bilder/u7/m_50cent.jpg" alt="50cent картинка" style="top:${rando(150, 550)}px; left:${rando(150, 550)}px;">`
+			$(".u7").append(m50c)
+		}
+		for (let i=0; i<rando(1, 5); i++){
+			var m20c = `<img class="m20c" src="../bilder/u7/m_20cent.jpg" alt="20cent картинка" style="top:${rando(150, 550)}px; left:${rando(150, 550)}px;">`
+			$(".u7").append(m20c)
+		}
+		
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		<div class="links">
+			<a href="https://learn.javascript.ru/constructor-new" target="_blank">Функция-конструктор</a>
+			<a href="https://learn.javascript.ru/classes" target="_blank">Классы</a>
+			<a href="https://learn.javascript.ru/class" target="_blank">Класс: базовый синтаксис</a>
+		</div>
+		
+		<div class="unterricht u10">
+			
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+
+<script>
+	//создал конструктор
+	function Quadro(name) {
+		this.name = name;
+		this.bColor = name;
+		this.height = "100px";
+		this.width = "100px";
+
+		this.drow();
+	}
+	Quadro.prototype.drow = function(){
+		$(".u10").append(`<p style="background-color:${this.bColor}; width:${this.width}; height:${this.height};">${this.name}</p>`)
+	}
+
+	//на основе конструктора создал объекты
+
+	let red = new Quadro("red");
+	let yellow = new Quadro("yellow");
+	let orange = new Quadro("orange");
+	let green = new Quadro("green");
+	let blue = new Quadro("blue");
+
+/*	var elementen = []
+
+	elementen.push(new Quadro("red"))
+	elementen.push(new Quadro("yellow"))
+	elementen.push(new Quadro("orange"))
+	elementen.push(new Quadro("green"))
+	elementen.push(new Quadro("blue"))
+
+*/
+
+	// console.log(elementen[0])
+	// console.log(elementen[1])
+	// console.log(elementen[2])
+	// console.log(elementen[3])
+	// console.log(elementen[4])
+
+	//вывел объекты
+
+
+/*
+function drow(){
+	for (var i = 0; i<elementen.length; i++){
+		elementen[i].drow()
+		console.log(elementen[i])
+	}
+}
+drow()
+*/
+
+</script>
+</body>
+</html>

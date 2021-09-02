@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u19">
+			<div class="auswahl">
+				<button class="stein"></button>
+				<button class="schere"></button>
+				<button class="papier"></button>
+			</div>
+			<div class="klient"></div>
+			<div class="maschine"></div>
+			<div class="wins">
+				<p>победы <span class="siege"> 0 </span> поражения <span class="verluste"> 0 </span> ничьи <span class="remi"> 0 </span></p>
+			</div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+
+<script>
+	var richter = {
+		"stein_papier" : false,
+		"stein_schere" : true,
+		"schere_stein" : false,
+		"schere_papier" : true,
+		"papier_schere" : false,
+		"papier_stein" : true,
+		"papier_papier" : "remi",
+		"stein_stein" : "remi",
+		"schere_schere" : "remi"
+	}
+
+	var atributs = ['stein', 'schere', 'papier'];
+
+	var spieler = null
+
+	var maschine = null
+
+	var remi = 0
+
+	var verlust = 0
+
+	var siege = 0
+
+
+	function punktenKontrolle(){
+
+		var key = spieler+"_"+maschine
+
+		console.log(richter[key])
+
+		if(richter[key] === true){
+			$(".siege").html(siege+=1)
+		}
+
+		if(richter[key] === false){
+			$(".verluste").html(verlust+=1)
+		}
+
+		if(richter[key] === "remi"){
+			$(".remi").html(remi+=1)
+		}
+		
+	}
+
+	$(".stein").on("click", function(){
+		spieler = "stein"
+		spiel()
+	})
+	$(".schere").on("click", function(){
+		spieler = "schere"
+		spiel()
+	})
+	$(".papier").on("click", function(){
+		spieler="papier"
+		spiel()
+	})
+
+	function spiel(){
+		maschine = atributs[rando(0,2)]
+		$(".klient").css({"backgroundImage": `url("../bilder/u19/${spieler}_1.jpg")`})
+		$(".maschine").css({"backgroundImage": `url("../bilder/u19/${maschine}_2.jpg")`})
+		punktenKontrolle()
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u22">
+			<div class="coordinator"></div>
+			<div class="level"></div>
+			<div class="worte"></div>
+			<div class="buttons bu1 active">1</div>
+			<div class="buttons bu2">2</div>
+			<div class="buttons bu3">3</div>
+			<div class="buttons bu4">4</div>
+			<div class="buttons bu5">5</div>
+			<div class="buttons bu6">6</div>
+
+			<div class="bilder">
+				
+			</div>
+			
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/glukofon.mp3'],
+      loop:true,
+      rate:0.9,
+      volume:0.3
+    });
+    sound.play()
+    var soundClick = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    });
+</script>
+<script>
+	$(".u22").on("mousemove", function(e){
+		var pos = $(".u22").offset()
+		var cursor = `top: ${e.pageY - pos.top}<br>left: ${e.pageX - pos.left}`
+		$(".coordinator").html(cursor)
+	})
+
+	$(".buttons").on("click", function(){
+		$(".buttons").toArray().map(function(item){
+			$(item).removeClass("active")
+		})
+		$(this).addClass("active")
+		var numberLevel = $(this).html()
+		levelDraw(numberLevel-1)
+	})
+						
+</script>
+<script>
+	var levels = [
+			{
+				url : "../bilder/u22/sache_1.jpg",
+				items : 
+				[
+					{
+						name: "утюг",
+						top: 290, left: 250,
+						width:80, height: 80
+					},
+					{
+						name: "брызгалка",
+						top: 285, left: 147,
+						width:55, height: 100
+					},
+					{
+						name: "стиральная машина",
+						top: 260, left: 340,
+						width:150, height: 150
+					},
+					{
+						name: "маленькая корзина с бельём",
+						top: 412, left: 360,
+						width:130, height: 60
+					},
+					{
+						name: "манекен",
+						top: 220, left: 635,
+						width:50, height: 210
+					},
+					{
+						name: "большая корзина с бельём",
+						top: 210, left: 780,
+						width:210, height: 150
+					},
+					{
+						name: "верёвка",
+						top: 40, left: 68,
+						width:80, height: 150
+					}
+				]
+			},
+/*-----------------------/level 1-------------------------*/
+/*------------------------level 2-------------------------*/
+			{
+				url : "../bilder/u22/sache_2.jpg",
+				items : 
+				[
+					{
+						name: "труба",
+						top: 30, left: 0,
+						width:150, height: 200
+					},
+					{
+						name: "череп",
+						top: 120, left: 665,
+						width:100, height: 70
+					},
+					{
+						name: "картина",
+						top: 156, left: 432,
+						width:140, height: 90
+					},
+					{
+						name: "улитка",
+						top: 380, left: 35,
+						width:50, height: 70
+					},
+					{
+						name: "сундук",
+						top: 325, left: 615,
+						width:110, height: 120
+					},
+					{
+						name: "окно",
+						top: 0, left: 420,
+						width:200, height: 130
+					}
+				]
+			},
+/*-----------------------/level 2-------------------------*/
+/*------------------------level 3-------------------------*/
+			{
+				url : "../bilder/u22/sache_3.jpg",
+				items : 
+				[
+					{
+						name: "граммофон",
+						top: 305, left: 168,
+						width:70, height: 100
+					},
+					{
+						name: "палитра",
+						top: 400, left: 100,
+						width:90, height: 35
+					},
+					{
+						name: "окно",
+						top: 0, left: 0,
+						width:110, height: 160
+					},
+					{
+						name: "кукла с ножом",
+						top: 80, left: 440,
+						width:80, height: 100
+					},
+					{
+						name: "красные флаги",
+						top: 220, left: 410,
+						width:30, height: 70
+					}
+				]
+			},
+/*-----------------------/level 3-------------------------*/
+/*------------------------level 4-------------------------*/
+			{
+				url : "../bilder/u22/sache_4.jpg",
+				items : 
+				[
+					{
+						name: "граммофон",
+						top: 210, left: 420,
+						width:80, height: 120
+					},
+					{
+						name: "телефон",
+						top: 300, left: 900,
+						width:90, height: 110
+					},
+					{
+						name: "кукла",
+						top: 330, left: 520,
+						width:90, height: 120
+					},
+					{
+						name: "лампа с абажюром",
+						top: 315, left: 235,
+						width:90, height: 170
+					},
+					{
+						name: "кожанная сумка",
+						top: 385, left: 625,
+						width:120, height: 100
+					}
+				]
+			},
+/*-----------------------/level 4-------------------------*/
+/*------------------------level 5-------------------------*/
+			{
+				url : "../bilder/u22/sache_5.jpg",
+				items : 
+				[
+					{
+						name: "телевизор",
+						top: 180, left: 80,
+						width:90, height: 80
+					},
+					{
+						name: "саксофон",
+						top: 20, left: 360,
+						width:60, height: 125
+					},
+					{
+						name: "подзорная труба",
+						top: 105, left: 470,
+						width:110, height: 60
+					},
+					{
+						name: "телефон",
+						top: 170, left: 780,
+						width:70, height: 60
+					},
+					{
+						name: "компас",
+						top: 355, left: 360,
+						width:50, height: 60
+					},
+					{
+						name: "свеча",
+						top: 240, left: 825,
+						width:60, height: 40
+					},
+				]
+			},
+/*-----------------------/level 5-------------------------*/
+/*------------------------level 6-------------------------*/
+			{
+				url : "../bilder/u22/sache_6.jpg",
+				items : 
+				[
+					{
+						name: "череп",
+						top: 140, left: 115,
+						width:50, height: 50
+					},
+					{
+						name: "шляпа",
+						top: 30, left: 800,
+						width:50, height: 50
+					},
+					{
+						name: "туфли",
+						top: 425, left: 290,
+						width:66, height: 50
+					},
+					{
+						name: "чайник",
+						top: 0, left: 680,
+						width:50, height: 40
+					},
+					{
+						name: "лошадь",
+						top: 119, left: 780,
+						width:50, height: 40
+					},
+				]
+			},
+/*-----------------------/level 6-------------------------*/
+	]
+</script>
+
+<script>
+	var lItems = []
+	function levelDraw(numberLevel){
+		reset()
+		var {url, items} = levels[numberLevel]
+		lItems = items
+		$(".bilder").css({backgroundImage: `url(${url})`})
+		items.map(item=>{
+			var tpl = `<div class="item" style="width:${item.width}px; height:${item.height}px; top:${item.top}px; left:${item.left}px;" data-name="${item.name}"></div>`
+			$(".worte").append(`<span>${item.name}</span>`)
+			$(".bilder").append(tpl)
+		})
+		$(".level").html("Уровень игры " + (numberLevel + 1))
+	}
+	levelDraw(0)
+	function reset(){
+		$(".worte").html("")
+		$(".bilder").html("")
+	}
+	$(".bilder").on("click", ".item", function(){
+		var clickItem = $(this).data("name")
+		lItems.map(item =>{
+			if(item.name === clickItem){
+				wortControle(clickItem, this)
+			}
+			
+		})
+	})
+
+	function wortControle(clickItem, element){
+		$(element).css({border: "3px solid DarkSeaGreen"})
+		$(".worte span").toArray().map(wort =>{
+			var text = $(wort).html()
+			if(text === clickItem){
+				$(wort).addClass("not-active")
+				checkEndLevel()
+			}
+		})
+	}
+var levelCounter = 0
+	function checkEndLevel(){
+		var lLength = $(".worte span.not-active").toArray().length
+		if(lItems.length === lLength){
+			checkEndGame()
+			levelDraw(levelCounter+=1)
+			
+			addClassToLevelControl(levelCounter)
+		}	
+	}
+	function addClassToLevelControl(levelCounter){
+		$(".buttons").toArray().map(function(item){
+			$(item).removeClass("active")
+		})
+		$(".buttons").toArray().map(function(item){
+			if($(item).html()==levelCounter+1){
+				$(item).addClass("active")
+			}	
+		})
+	}
+	function checkEndGame(){
+		if(levels.length === levelCounter){
+			alert("Вы прошли все уровни на хрен")
+		}
+	}
+
+
+</script>
+
+</body>
+</html>

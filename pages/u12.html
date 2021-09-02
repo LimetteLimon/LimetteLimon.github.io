@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		<div class="links">
+			<a href="https://learn.javascript.ru/constructor-new" target="_blank">Функция-конструктор</a>
+			<a href="https://learn.javascript.ru/classes" target="_blank">Классы</a>
+			<a href="https://learn.javascript.ru/class" target="_blank">Класс: базовый синтаксис</a>
+		</div>
+		
+		<div class="unterricht u12">
+			
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+
+<script>
+	function collision(obj1, obj2){
+  			var XColl=false;
+  			var YColl=false;
+
+  			if ((obj1.x + obj1.w >= obj2.x) && (obj1.x <= obj2.x + obj2.w)) XColl = true;
+  			if ((obj1.y + obj1.h >= obj2.y) && (obj1.y <= obj2.y + obj2.h)) YColl = true;
+
+  			if (XColl&YColl){return true;}
+  			return false;
+	};
+	var objecten = []
+	//создал class Quadro
+	class Wall {
+		constructor(obj){
+			this.bColor = obj.bColor||"Gainsboro";
+			this.h = obj.h||30;
+			this.w = obj.w||30;
+			this.x = obj.x;
+			this.y = obj.y;
+
+			this.name = obj.name||"wall";
+
+			this.drow();
+			objecten.push(this)
+		}
+
+		drow(){
+			$(".u12").append(`<p class="${this.name}" style="background-color:${this.bColor}; width:${this.w}px; height:${this.h}px; top:${this.y}px; left:${this.x}px;"></p>`)
+		}
+
+		
+	}
+
+	//на основе class Wall создал объекты клоны
+
+	new Wall({w:800, h:225, x:0, y:0});
+	new Wall({w:800, h:225, x:0, y:275});
+
+	new Wall({w:50, h:50, x:0, y:225, bColor:"green", name:"start"});
+	new Wall({w:50, h:50, x:750, y:225, bColor:"orange", name:"end"});
+
+	var offset = $(".u12").offset()
+
+	$(".u12").on("mousemove", function(e){
+
+		var cursor = {y: e.pageY-offset.top.toFixed(), x: e.pageX-offset.left.toFixed(), w:1, h:1}
+		console.log(cursor)
+		objecten.map(function(item){
+			var col = collision(item, cursor)
+
+			if(col){
+				console.log("столкновение")
+			}
+	
+		})
+
+
+	})
+
+
+
+
+</script>
+</body>
+</html>

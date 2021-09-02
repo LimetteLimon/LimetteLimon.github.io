@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		<div class="links">
+			<a href="https://learn.javascript.ru/constructor-new" target="_blank">Функция-конструктор</a>
+			<a href="https://learn.javascript.ru/classes" target="_blank">Классы</a>
+			<a href="https://learn.javascript.ru/class" target="_blank">Класс: базовый синтаксис</a>
+		</div>
+		
+		<div class="unterricht u13">
+			<div class="woroni">
+				
+			</div>
+			
+			<div class="text">
+				<p></p>
+			</div>
+			<div class="num">
+				<p>0</p>
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+				<p>5</p>
+				<p>6</p>
+				<p>7</p>
+				<p>8</p>
+				<p>9</p>
+				<p>10</p>
+			</div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<!-- 
+вставляться должно от 0 до 9 ворон по горизонтали с разницей в 60 пикселей (20 - 510)
+по вертикали должны быть 3 случайных варианта 65 115 160 пикселей
+ -->
+<script>
+
+	var woroniLength = 0
+
+	function levelDraw(){
+		$(".woroni").html("")
+		var left = 20
+		var topArr = [65, 115, 160]
+
+		woroniLength = rando(1, 9)
+
+		for(var i = 0; i<woroniLength; i++){
+			var tplWorona = `<div class="worona" style="top:${topArr[rando(0,2)]}px; left:${left+=60}px;"></div>`
+			$(".woroni").append(tplWorona)
+		}
+	}
+	
+	levelDraw()
+	$(".num p").on("click", function(){
+		setTimeout(levelDraw, 500)
+		var n = Number($(this).html())
+		$(".text p").html(n)
+		if(n==woroniLength){
+			alert("правильный ответ "+n)
+		}
+		else{alert("ответ неправильный")}
+			console.log(n,"n")
+			console.log(woroniLength,"woroniLength")
+	})
+
+</script>
+</body>
+</html>

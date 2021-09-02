@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u23">
+
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/glukofon.mp3'],
+      loop:true,
+      rate:0.9,
+      volume:0.3
+    });
+    sound.play()
+    var soundClick = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    });
+</script>
+<script>
+	var uhrTpl = ` 
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMin meet" width="100%" height="100%" viewBox="0 0 50 50">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Arial";src:url("#FontID0") format(svg)}
+    .str0 {stroke:black;stroke-width:0.3}
+    .fil1 {fill:#000066}
+    .fil0 {fill:#14144A}
+    .fil2 {fill:white}
+    .fnt0 {font-weight:normal;font-size:0.3;font-family:'Arial'}
+   ]]>
+	
+		
+  </style>
+ </defs>
+ 
+ <g id="handUhr">
+
+	<rect style="fill:black;" width="50" height="10" x="0" y="20" rx="0" ry="0" />
+	<text id="punkte1" x="200" y="340"  class="str0" transform="scale(0.08)" style="fill:white;">:</text>
+	<text id="punkte2" x="400" y="340"  class="str0" transform="scale(0.08)" style="fill:white;">:</text>
+
+	<g class="stunden" transform="translate(0,-19.1)">
+		<text x="40" y="350"  class="str0" transform="scale(0.08)" style="fill:white;">00</text>
+		<text x="40" y="470"  class="str0" transform="scale(0.08)" style="fill:white;">01</text>
+		<text x="40" y="590"  class="str0" transform="scale(0.08)" style="fill:white;">02</text>
+		<text x="40" y="710"  class="str0" transform="scale(0.08)" style="fill:white;">03</text>
+		<text x="40" y="830"  class="str0" transform="scale(0.08)" style="fill:white;">04</text>
+		<text x="40" y="950"  class="str0" transform="scale(0.08)" style="fill:white;">05</text>
+		<text x="40" y="1070"  class="str0" transform="scale(0.08)" style="fill:white;">06</text>
+	</g>
+	<g class="minuten" transform="translate(0,-9.55)">
+		<text x="240" y="350"  class="str0" transform="scale(0.08)" style="fill:white;">00</text>
+		<text x="240" y="470"  class="str0" transform="scale(0.08)" style="fill:white;">01</text>
+		<text x="240" y="590"  class="str0" transform="scale(0.08)" style="fill:white;">02</text>
+		<text x="240" y="710"  class="str0" transform="scale(0.08)" style="fill:white;">03</text>
+		
+	</g>
+	<g class="sekunden" transform="translate(0, -28.65)">
+		<text x="440" y="350"  class="str0" transform="scale(0.08)" style="fill:white;">00</text>
+		<text x="440" y="470"  class="str0" transform="scale(0.08)" style="fill:white;">01</text>
+		<text x="440" y="590"  class="str0" transform="scale(0.08)" style="fill:white;">02</text>
+		<text x="440" y="710"  class="str0" transform="scale(0.08)" style="fill:white;">03</text>
+	</g>
+	
+ </g>
+</svg>
+
+	`
+var zeitX = 0
+var zeitY = 0
+var ziverZeit = 0
+var schritt = 120
+var translateSchritt = 9.55
+
+
+	var zahlenTpl = ` 
+	<text x="${zeitX}" y="${zeitY}"  class="str0" transform="scale(0.1)" style="fill:white;">${ziverZeit}</text>
+	`
+</script>
+<script>
+	var stundenTextX = 21.5
+	var minutenTextX = 43.5
+	var sekundenTextX = 65.5
+	
+	function createUhr(){
+		$(".u23").html(uhrTpl)
+	}
+	createUhr()
+</script>
+</body>
+</html>

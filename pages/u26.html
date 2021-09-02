@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u26">
+			<p class="level">Уровень 1</p>
+			<div class="buttons">
+				
+			</div>
+			<div class="bilder">
+				 
+			</div>
+			<div class="bilderKlein">
+			</div>
+			
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+var levels = [
+	{
+		char_src : "../bilder/u26/bar.jpg",
+		char_name : "Bär",
+		rAntworte : 2,
+		images : [
+			{
+				kl_src : "../bilder/u26/honig3.jpg",
+				kl_name : "Honig",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/wurm.jpg",
+				kl_name : "Wurm",
+				class : "nr"
+			},
+			{
+				kl_src : "../bilder/u26/korn1.jpg",
+				kl_name : "Korn",
+				class : "nr"
+			},
+			{
+				kl_src : "../bilder/u26/fisch.jpg",
+				kl_name : "Fisch",
+				class : "r"
+			}
+		]
+	},
+	/*------------------level 2----------------------*/
+	{
+		char_src : "../bilder/u26/frau3.jpg",
+		char_name : "Frau",
+		rAntworte : 4,
+		images : [
+			{
+				kl_src : "../bilder/u26/tasseKafee.jpg",
+				kl_name : "Eine Kafeetasse",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/zweiKafeeTassen.jpg",
+				kl_name : "Zwei Kafeetassen",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/buterbrot.jpg",
+				kl_name : "Buterbrot",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/hamburger.jpg",
+				kl_name : "Ein Hamburger",
+				class : "r"
+			}
+		]
+	},
+	/*------------------level 3----------------------*/
+	{
+		char_src : "../bilder/u26/chick.jpg",
+		char_name : "Ein Küken",
+		rAntworte : 4,
+		images : [
+			{
+				kl_src : "../bilder/u26/korn1.jpg",
+				kl_name : "Körner",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/korn2.jpg",
+				kl_name : "Körner",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/wurm.jpg",
+				kl_name : "Ein Wurm",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/wurmReal.jpg",
+				kl_name : "Ein Wurm",
+				class : "r"
+			}
+		]
+	},
+	/*------------------level 4----------------------*/
+	{
+		char_src : "../bilder/u26/krokodil.jpg",
+		char_name : "Ein Krokodil",
+		rAntworte : 4,
+		images : [
+			{
+				kl_src : "../bilder/u26/chick.jpg",
+				kl_name : "Ein Küken",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/entlein.jpg",
+				kl_name : "Einen Entlein",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/fisch.jpg",
+				kl_name : "Eine Fisch",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/frau2.jpg",
+				kl_name : "Eine Frau",
+				class : "r"
+			}
+		]
+	},
+		/*------------------level 5----------------------*/
+	{
+		char_src : "../bilder/u26/kater.jpg",
+		char_name : "Ein Kater",
+		rAntworte : 3,
+		images : [
+			{
+				kl_src : "../bilder/u26/chick.jpg",
+				kl_name : "Ein Küken",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/entlein.jpg",
+				kl_name : "Einen Entlein",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/fisch.jpg",
+				kl_name : "Eine Fisch",
+				class : "r"
+			},
+			{
+				kl_src : "../bilder/u26/tasseKafee.jpg",
+				kl_name : "Eine Kafeetasse",
+				class : "nr"
+			}
+		]
+	}
+]
+</script>
+<script>
+	var numberLevel = 0
+	var rAntworte = 0
+
+	function levelDraw(){
+		reset()
+		rAntworte = levels[numberLevel].rAntworte
+		
+		var gbTpl = ` 
+			<img src="${levels[numberLevel].char_src}" alt="${levels[numberLevel].char_name}">
+		`
+		$(".u26 .bilder").html(gbTpl)
+
+		levels[numberLevel].images.map(img =>{
+
+			var klbTpl = ` 
+			<img src="${img.kl_src}" class="${img.class}" alt="${img.kl_name}">
+		`
+			$(".u26 .bilderKlein").append(klbTpl)
+		})
+		$(".u26 .level").html("Уровень: "+(numberLevel+1))
+	}
+	levelDraw()
+
+	levels.map(function(level, i){
+		var buttonTpl = ""
+		if(i===0){
+			buttonTpl = `<div class="button active">${i+1}</div>`
+		}
+		else{
+			buttonTpl = `<div class="button">${i+1}</div>`
+		}
+		$(".u26 .buttons").append(buttonTpl)
+	})
+
+	$(".u26 .buttons").on("click", ".button", function(){
+		/*navControll($(this).html()-1)*/
+	})
+	function navControll(n){
+		numberLevel = n
+		levelDraw()
+		$(".u26 .buttons .button").toArray().map(function(btn){
+
+			$(btn).removeClass("active")
+		})
+		$(this).addClass("active")
+	}
+	var rCount = 0
+	$(".u26 .bilderKlein").on("click", "img", function(){
+		var klass = $(this).attr("class")
+		if (klass === "r"){
+			//rAntworte
+			rCount = rCount+1
+			levelControl(rCount, this)
+		}
+		else{
+			
+		}
+	})
+	function levelControl(rCount, _this){
+		$(_this).removeClass("r")
+		$(_this).addClass("checked")
+		if(rCount===rAntworte){
+			alert("все ответы правильны")
+			numberLevel+=1
+			levelDraw()
+		}
+	}
+
+	function reset(){
+		rCount=0
+		$(".u26 .bilderKlein").html("")
+		navControll(numberLevel)
+	}
+	/*function isEnd(){
+		var lLength = levels.length
+	}*/
+</script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/glukofon.mp3'],
+      loop:true,
+      rate:0.9,
+      volume:0.3
+    });
+    sound.play()
+    var soundClick = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    });
+</script>
+
+
+</body>
+</html>

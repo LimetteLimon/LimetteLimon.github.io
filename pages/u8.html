@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		
+		<div class="unterricht u8">
+			
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+
+function collision(obj1, obj2){
+  var XColl=false;
+  var YColl=false;
+
+  if ((obj1.left + obj1.width >= obj2.left) && (obj1.left <= obj2.left + obj2.width)) XColl = true;
+  if ((obj1.top + obj1.height >= obj2.top) && (obj1.top <= obj2.top + obj2.height)) YColl = true;
+
+  if (XColl&YColl){return true;}
+  return false;
+};
+
+function kubDraw(){
+	var obj = {
+		width: 50,
+		height: 50,
+		top: rando(50, 400),
+		left: rando(50, 700)
+	}
+
+	var kub = `<div class="kub" style="left:${obj.left}px; top:${obj.top}px; background-image: url(../bilder/u8/cub_${rando(1, 6)}.svg); transform: rotate(${rando(0, 355)}deg)"></div>`
+		$(".u8").append(kub)
+	return obj
+}
+
+$(".u8").on("click", function(){
+	$(".u8").html("")
+	var col = collision(kubDraw(), kubDraw())
+	console.log(col)
+
+	if (col){
+		$(".u8").html("")
+		kubDraw()
+		kubDraw()
+	}
+})
+</script>
+</body>
+</html>

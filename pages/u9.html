@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		<div class="unterricht u9">
+			<p class="point" style="color:red;">0</p>
+			<div class="ziel_wrap wrap_1">
+				<div class="ziel"></div>
+			</div>
+			<div class="ziel_wrap wrap_2">
+				<div class="ziel"></div>
+			</div>
+			<div class="ziel_wrap wrap_3">
+				<div class="ziel"></div>
+			</div>
+			<div class="ziel_wrap wrap_4">
+				<div class="ziel"></div>
+			</div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+
+<script>
+	var point = $(".point")
+	var p = 0
+	class Ziel {
+		constructor(el){
+			this.el = $(el)
+			this.clickHandler()
+			this.loop()
+		}
+		clickHandler(){
+			this.el.on("mousedown", ()=>{
+				point.text(p++)
+			})
+		}
+		hide(cb){
+			this.el.animate({
+				top: "131px"
+			},
+				1000,
+				()=>{
+					this.el.hide()
+					cb()
+				})
+		}
+		show(cb){
+			this.el.show()
+			this.el.animate({
+				top: "0"
+			},
+			1000, cb)
+		}
+		loop(){
+			var fn = _=>{
+				this.hide(()=> {
+				setTimeout(_=> {
+					this.show(fn)
+				}, rando(0, 10000))
+			})
+			}
+			fn()
+		}
+	}
+	var z1 = new Ziel(".wrap_1 .ziel")
+	var z2 = new Ziel(".wrap_2 .ziel")
+	var z3 = new Ziel(".wrap_3 .ziel")
+	var z4 = new Ziel(".wrap_4 .ziel")
+
+</script>
+</body>
+</html>

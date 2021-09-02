@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u24">
+			<div class="uhr c1"></div>
+			<div class="uhr c2"></div>
+			<div class="uhr c3"></div>
+			<div class="uhr c4"></div>
+			<div class="uhr c5"></div>
+			<div class="uhr c6"></div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/glukofon.mp3'],
+      loop:true,
+      rate:0.9,
+      volume:0.3
+    });
+    sound.play()
+    var soundClick = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    });
+</script>
+<script>
+	var uhrTpl1 = `
+		<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid meet" width="100%" height="100%" viewBox="0 0 50 50" >	
+			<circle cx="25" cy="25" r="22" fill="none" stroke="silver" stroke-width="3"/>
+			<g>
+				<rect class="hour" x="24.2" y="8.8" width="1.6" height="23.7" fill="silver" transform="rotate(0, 25, 25)" />
+				<rect class="minute" x="24.5" y="7.5" width="1" height="25" fill="silver" transform="rotate(35, 25, 25)" />
+				<rect class="second" x="24.65" y="5" width="0.7" height="28" fill="red" transform="rotate(82, 25, 25)" />
+				<circle r="1" cy="25" cx="25" fill="red" />
+			</g>	
+		</svg>
+	`
+	var uhrTpl2 = `
+		<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet"
+width="100%" height="100%" viewBox="0 0 50 50">
+<title>Kinderuhr</title>
+<defs>
+<style>
+	.red{fill:red;}
+	.linie{fill:none; stroke:rgb(204, 0, 0); stroke-width:2px; stroke-linecap:butt; stroke-linejoin:miter; stroke-opacity:1;}
+	.dodgerblue{fill:dodgerblue;}
+	.mediumblue{fill:mediumblue;}
+	.sirenj{fill:rgb(204, 0, 0);}
+	.green{fill:green;}
+	.gelb{fill:yellow;}
+	
+	.orange1{fill:#ffd42a;}
+	.orange2{fill:orange;}
+	.orange3{fill:darkorange;}
+	
+	.red1{fill:orangered;}
+	.red2{fill:red;}
+	.red3{fill:crimson;}
+	
+	.blue1{fill:mediumvioletred;}
+	.blue2{fill:darkmagenta;}
+	.blue3{fill:mediumblue;}
+	
+	.green1{fill:rgba(0, 110, 91, 1);}
+	.green2{fill:limegreen;}
+	.green3{fill:lawngreen;}
+	
+</style>
+
+<linearGradient id="gradient" x1="0" y1="0" x2="0" y2="100%">
+<stop offset="60%" stop-color="red" />
+<stop offset="100%" stop-color="crimson" />
+</linearGradient>
+
+
+<path id="segment" transform="translate(-0.1,0.5)"
+          d="M 25 2.4726562 L 25 25 L 36.236328 5.6054688 A 22 22 0 0 0 25 2.4726562 z" />
+<circle id="minuteGross" cx="25" cy="25" r=".4" class="red"  transform="translate(0,-11)" />
+<circle id="minute" cx="25" cy="25" r=".25" class="red"  transform="translate(0,-11) rotate(6, 25, 25)" />
+<g id="min5Kl">
+	<use xlink:href="#minute" transform="rotate(6, 25, 25)"/>
+	<use xlink:href="#minute" transform="rotate(12, 25, 25)"/>
+	<use xlink:href="#minute" transform="rotate(18, 25, 25)"/>
+	<use xlink:href="#minute" transform="rotate(24, 25, 25)"/>
+</g>
+
+<g id="minKl">
+	<use xlink:href="#min5Kl" />
+	<use xlink:href="#min5Kl" transform="rotate(30, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(60, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(90, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(120, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(150, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(180, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(210, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(240, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(270, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(300, 25, 25)"/>
+	<use xlink:href="#min5Kl" transform="rotate(330, 25, 25)"/>
+</g>
+
+<g id="minPunktGr">
+	<use xlink:href="#minuteGross" />
+	<use xlink:href="#minuteGross" transform="rotate(30, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(60, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(90, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(120, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(150, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(180, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(210, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(240, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(270, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(300, 25, 25)"/>
+	<use xlink:href="#minuteGross" transform="rotate(330, 25, 25)"/>
+</g>
+<g id="segmente">		
+<g id="segmenteOrange">
+	<use xlink:href="#segment" class="orange1" />
+	<use xlink:href="#segment" class="orange2" transform="rotate(30, 25, 25)"/>
+	<use xlink:href="#segment" class="orange3" transform="rotate(60, 25, 25)"/>
+</g>
+<g id="segmenteRed">
+	<use xlink:href="#segment" class="red1" transform="rotate(90, 25, 25)"/>
+	<use xlink:href="#segment" class="red2" transform="rotate(120, 25, 25)"/>
+	<use xlink:href="#segment" class="red3" transform="rotate(150, 25, 25)"/>
+</g>
+<g id="segmenteBlue">
+	<use xlink:href="#segment" class="blue1" transform="rotate(180, 25, 25)"/>
+	<use xlink:href="#segment" class="blue2" transform="rotate(210, 25, 25)"/>
+	<use xlink:href="#segment" class="blue3" transform="rotate(240, 25, 25)"/>
+</g>
+<g id="segmenteGreen">
+	<use xlink:href="#segment" class="green1" transform="rotate(270, 25, 25)"/>
+	<use xlink:href="#segment" class="green2" transform="rotate(300, 25, 25)"/>
+	<use xlink:href="#segment" class="green3" transform="rotate(330, 25, 25)"/>
+</g>
+</g>
+ <g id="zeit"  fill="rgb(204, 0, 0)">
+		<text x="0" y="3"  transform="translate(22.9,12) scale(0.04, 0.04)">12</text>
+
+		<text x="0" y="3"  transform="translate(23.9,41) scale(0.04, 0.04)">6</text>
+
+	 <!--<text x="0" y="3"  transform="translate(31,11)">1</text>
+	 <text x="0" y="3"  transform="translate(36.2,16.5)">2</text>
+	 <text x="0" y="3"  transform="translate(38,23.5)">3</text>
+	 <text x="0" y="3"  transform="translate(36.2,30.5)">4</text>
+	 <text x="0" y="3"  transform="translate(31.3,35.8)">5</text>
+	 
+	 <text x="0" y="3"  transform="translate(15.3,35.8)">7</text>
+	 <text x="0" y="3"  transform="translate(10.6,30.5)">8</text>
+	 <text x="0" y="3"  transform="translate(9,23.5)">9</text>
+	 <text x="0" y="3"  transform="translate(9.2,16.5)">10</text>
+	 <text x="0" y="3"  transform="translate(15,11)">11</text> -->
+	 
+</g>
+
+<g id="welleTanz" transform="translate(21.5,22.8) scale(.16)">
+<path  id="welle"   
+	d="m 39.760807,39.727048 c -3.400007,2.380005 -2.129082,6.117921 -6.029227,7.536843 -3.900145,1.418922 -5.328223,-2.261821 -9.462718,-1.90068 -4.134494,0.361142 -4.9028,4.233735 -8.989884,3.512485 C 11.191891,48.154445 11.795511,44.25279 8.0343626,42.4983 4.273215,40.74381 1.6715463,43.713422 -1.5073479,41.045258 -4.686243,38.377094 -2.2126652,35.299971 -4.5926705,31.899964 c -2.3800046,-3.400006 -6.1179215,-2.129082 -7.5368425,-6.029226 -1.418922,-3.900146 2.2618205,-5.328223 1.900679,-9.462719 -0.361141,-4.134494 -4.233734,-4.902799 -3.512484,-8.9898842 0.72125,-4.0870861 4.6229057,-3.4834662 6.3773957,-7.24461495 1.7544894,-3.76114755 -1.2151219,-6.36281625 1.4530416,-9.54171045 2.6681642,-3.1788954 5.74528701,-0.7053174 9.1452943,-3.0853224 3.4000062,-2.380005 2.1290817,-6.117922 6.0292261,-7.536843 3.9001453,-1.418922 5.3282233,2.261821 9.4627183,1.900679 4.134494,-0.361141 4.9028,-4.233734 8.989885,-3.512484 4.087086,0.721251 3.483466,4.622906 7.244615,6.377396 3.761147,1.754489 6.362816,-1.215122 9.54171,1.453042 3.178895,2.668164 0.705317,5.7452866 3.085323,9.1452939 2.380004,3.4000062 6.117921,2.1290817 7.536843,6.0292261 1.418921,3.9001456 -2.261821,5.3282232 -1.90068,9.462719 0.361141,4.134494 4.233735,4.902799 3.512484,8.989884 -0.72125,4.087086 -4.622905,3.483466 -6.377395,7.244615 -1.75449,3.761148 1.215121,6.362816 -1.453042,9.54171 -2.668164,3.178895 -5.745287,0.705318 -9.145294,3.085323 z">
+
+<animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 21.5 13.5"
+                          to="360 21.5 13.5"
+                          dur="120s"
+                          repeatCount="indefinite"/>
+	
+</path>
+</g>
+
+<g id="uhr">
+<use xlink:href="#segmente" />
+<circle id="krug1" cx="25" cy="25" r="22.8" class="linie" />
+<circle id="krug2" cx="25" cy="25" r="18" class="gelb" />
+<use xlink:href="#minKl" />
+<use xlink:href="#minPunktGr" />
+<use xlink:href="#zeit" />
+<circle id="zenter" cx="25" cy="25" r="7" class="sirenj" />
+
+
+<use xlink:href="#welleTanz" style="fill:none; stroke:orange; stroke-width:3px;"/>
+<use xlink:href="#welleTanz" transform="translate(-64.7,-64.9) scale(3.598)" style="fill:none; stroke:orange; stroke-width:1px;"/>
+
+<g class="hour" >
+<rect style="fill:green;" width="3" height="11.5" x="23.5" y="15"/>
+</g>
+
+<g class="minute">
+<rect fill="orange" width="3" height="16.5" x="23.5" y="10"/>
+</g>
+
+<g class="second" >
+<rect fill="orangered" width="3" height="16.5" x="23.5" y="10"/>
+<circle cx="25" cy="25" r=".5" fill="orange" />
+</g>
+
+</g>
+</defs>
+
+<use xlink:href="#uhr" />
+
+</svg>
+
+
+	`
+	
+</script>
+<script>
+	class Clock {
+	constructor(elem){
+		this.second = $(elem).find(`.second`);
+		this.minute = $(elem).find(`.minute`);
+		this.hour = $(elem).find(`.hour`);
+		this.update()
+	}
+
+	update (){
+		let day = new Date();
+			setTimeout(_=>{
+				this.s = day.getSeconds();
+				this.m = day.getMinutes();	
+				this.h = day.getHours();
+				if(this.h>12){
+					this.h-12;
+				}
+				this.hour.attr('transform', `rotate(${(this.h + (1/60)*this.m)*30 }, 25, 25)`);
+				this.minute.attr('transform', `rotate(${this.m*6}, 25, 25)`);
+				this.second.attr('transform', `rotate(${this.s*6}, 25, 25)`);
+				this.update();
+		}, 500)
+
+	}
+}
+
+$(".c1").append(uhrTpl1)
+$(".c2").append(uhrTpl2)
+new Clock('.c1')
+new Clock('.c2')
+
+</script>
+</body>
+</html>
