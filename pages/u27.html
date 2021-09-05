@@ -35,25 +35,67 @@
 		
 		<div class="unterricht u27">
 			<div class="praline p1">
-				<img src="../bilder/u27/praline_1.png" style="top:50px; left: 20px; transform:  rotate(20deg);" alt="praline">
+				
 			</div>
 			<div class="zenter">
 				<img src="../bilder/u27/frage.jpg" alt="frage">
+				<!-- <img src="../bilder/u27/wenig.jpg" class="wenig" alt="wenig"> -->
 			</div>
 			<div class="praline p2">
-				<img src="../bilder/u27/praline_2.png" alt="praline">
+				
 			</div>
 			<div class="antwort">
-				<img src="../bilder/u27/wenig.jpg" alt="wenig">
-				<img src="../bilder/u27/gleich.jpg" alt="gleich">
-				<img src="../bilder/u27/mehr.jpg" alt="mehr">
+				<img src="../bilder/u27/wenig.jpg" class="wenig" alt="wenig">
+				<img src="../bilder/u27/gleich.jpg" class="gleich" alt="gleich">
+				<img src="../bilder/u27/mehr.jpg" class="mehr" alt="mehr">
 			</div>
 			
 		</div>
 
 	</main>
 <script src="../js/jScript.js"></script>
+<script>
+	
+	function pralinen(el){
+		var pralinenZahl = rando(1, 10)
+		for(var i=0; i<pralinenZahl; i++){
+			var pralinen = ` 
+				<img src="../bilder/u27/praline_${rando(1, 8)}.png" style="top:${rando(40, 350)}px; left: ${rando(20, 200)}px; transform:  rotate(${rando(1, 355)}deg);" alt="praline">`
+			$(".u27 " + el).append(pralinen)
+		}
+		return pralinenZahl
+	}
+	var n = pralinen(".p1")-pralinen(".p2")
 
+	function pralinenControll(u){
+		if(u===){
+			$(".zenter").html(`<img src="../bilder/u27/wenig.jpg" alt="wenig">`)
+		}
+		else if(n>0){
+			$(".zenter").html(`<img src="../bilder/u27/mehr.jpg" alt="mehr">`)
+		}
+		else if(n===0){
+			$(".zenter .gleich").html(`<img src="../bilder/u27/gleich.jpg" alt="gleich">`)
+		}
+		else{
+			$(".zenter").html(`<p>не правильно</p>`)
+		}
+	}
+
+		$(".antwort .wenig").on("click", function(){
+			pralinenControll(false)
+			
+		})
+		$(".antwort .gleich").on("click", function(){
+			pralinenControll(0)
+			
+		})
+		$(".antwort .mehr").on("click", function(){
+			pralinenControll(true)
+			
+		})
+
+</script>
 <script>
     var sound = new Howl({
       src: ['../audio/glukofon.mp3'],

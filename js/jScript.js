@@ -138,23 +138,37 @@ var dataNavi = [
 		href: "u27",
 		thema: "Сравни конфетки",
 		title: "Урок 27"
+	},
+	{
+		href: "u28",
+		thema: "Найди координаты",
+		title: "Урок 28"
 	}
 
 ]
 
-let url = location.href.split("http://localhost:9000/")[1]
+let url = location.pathname
+function isHome(){
+	if("/" === url){
+		return true
+	}
+	else{
+		return false
+	}
+}
 
 function navi(link, i){
 	let naviTempl = ""
-	if(link.href === ""){
+	if(isHome()){
 		naviTempl = `
-		<li class="navi-item"><a href="/${link.href}" id="item_${i}">${link.title}</a></li>`
+		<li class="navi-item"><a href="/pages/${link.href}.html" id="item_${i}">${link.title}</a></li>`
 	}
 	else{
 		naviTempl = `
 		<li class="navi-item"><a href="/pages/${link.href}.html" id="item_${i}">${link.title}</a></li>`
 	}
-	$(".navi ul").append(naviTempl)
+	$(".navi ul").append(naviTempl);
+	$(".navi ul .navi-item").first().find('a').attr('href', '/')
 }
 
 dataNavi.map(function(link, i){
@@ -165,14 +179,14 @@ dataNavi.map(function(link, i){
 function title(){
 	dataNavi.map(function(link){
 
-	if(url === ""){
+	if(isHome()){
 		if(link.href === url){
 			$("h1").html(link.thema)
 			$("title").html(link.thema)
 		}
 	}
 	else{
-		let passName = url.split("pages/")[1].split(".html")[0]
+		let passName = url.split("/pages/")[1].split(".html")[0]
 		if(link.href === passName){
 			$("h1").html(link.thema)
 			$("title").html(link.thema)
@@ -182,21 +196,14 @@ function title(){
 }
 title()
 
-if(url === ""){
+if(isHome()){
 		follMenu()
 	}
 function follMenu(){
 	dataNavi.map(function(link){
-if(link.href === ""){
-	let naviTempl = `
-		<li class="navi-item"><a href="/">${link.title} ${link.thema}</a></li>`
-	$(".naviGross ul").append(naviTempl)
-}
-else{
 	let naviTempl = `
 		<li class="navi-item"><a href="/pages/${link.href}.html">${link.title}: ${link.thema}</a></li>`
 	$(".naviGross ul").append(naviTempl)
-}
 	
 	})
 }
@@ -207,14 +214,7 @@ $(".navi ul").on("click", ".navi-item a", function(){
 	console.log(this)
 })
 
-function isHome(){
-	if("/" === location.pathname){
-		return true
-	}
-	else{
-		return false
-	}
-}
+
 if(isHome()){
 	localStorage.removeItem("active")
 }
@@ -236,6 +236,8 @@ $(".naviGross ul").on("click", ".navi-item a", function(event){
 		}
 	})
 })
+
+
 
 function addLogo (){
 var template = 
