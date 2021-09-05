@@ -1424,30 +1424,36 @@ table.test_1 tr td, table.test_2 tr td {
   width: 100px;
   height: 100px;
   background-color: white;
+  color: SeaGreen;
   cursor: pointer;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-.u28 .base .quadro.b1 {
-  background-image: url("../bilder/u28/bar.jpg"); }
-
+/*
+.u28 .base .quadro.b1{
+	background-image: url("../bilder/u28/bar.jpg");
+}
 .u28 .base .quadro.e3 {
-  background-image: url("../bilder/u28/chick.jpg"); }
-
+	background-image: url("../bilder/u28/chick.jpg");
+}
 .u28 .base .quadro.c5 {
-  background-image: url("../bilder/u28/entlein.jpg"); }
-
+	background-image: url("../bilder/u28/entlein.jpg");
+}
 .u28 .base .quadro.a4 {
-  background-image: url("../bilder/u28/fisch.jpg"); }
-
+	background-image: url("../bilder/u28/fisch.jpg");
+}
 .u28 .base .quadro.b4 {
-  background-image: url("../bilder/u28/kater.jpg"); }
-
+	background-image: url("../bilder/u28/kater.jpg");
+}
 .u28 .base .quadro.d2 {
-  background-image: url("../bilder/u28/krokodil.jpg"); }
-
+	background-image: url("../bilder/u28/krokodil.jpg");
+}
 .u28 .base .quadro.c3 {
-  background-image: url("../bilder/u28/tasseKafee.jpg"); }
-
+	background-image: url("../bilder/u28/tasseKafee.jpg");
+}
+*/
 .u28 .tasten {
   width: 200px;
   height: 520px;

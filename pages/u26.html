@@ -227,16 +227,17 @@ var levels = [
 	})
 
 	$(".u26 .buttons").on("click", ".button", function(){
-		/*navControll($(this).html()-1)*/
-	})
-	function navControll(n){
-		numberLevel = n
+		navControll($(this).html()-1, this)
 		levelDraw()
+	})
+	function navControll(n, contextBtn){
+		numberLevel = n
+		
 		$(".u26 .buttons .button").toArray().map(function(btn){
 
 			$(btn).removeClass("active")
 		})
-		$(this).addClass("active")
+		$(contextBtn).addClass("active")
 	}
 	var rCount = 0
 	$(".u26 .bilderKlein").on("click", "img", function(){
@@ -257,17 +258,26 @@ var levels = [
 			alert("все ответы правильны")
 			numberLevel+=1
 			levelDraw()
+			$(".u26 .buttons .button").toArray().map(function(btn){
+				if($(btn).text()==numberLevel+1){
+					navControll(numberLevel, btn)
+				}
+			
+			})
 		}
 	}
 
 	function reset(){
 		rCount=0
 		$(".u26 .bilderKlein").html("")
-		navControll(numberLevel)
+			isEnd()
 	}
-	/*function isEnd(){
+	function isEnd(){
 		var lLength = levels.length
-	}*/
+		if(lLength===numberLevel){
+			numberLevel=0
+		}
+	}
 </script>
 <script>
     var sound = new Howl({

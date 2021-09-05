@@ -38,7 +38,7 @@
 				
 			</div>
 			<div class="zenter">
-				<img src="../bilder/u27/frage.jpg" alt="frage">
+				
 				<!-- <img src="../bilder/u27/wenig.jpg" class="wenig" alt="wenig"> -->
 			</div>
 			<div class="praline p2">
@@ -57,33 +57,41 @@
 <script>
 	
 	function pralinen(el){
-		var pralinenZahl = rando(1, 10)
+		$(".u27 " + el).html("")
+		var pralinenZahl = rando(1, 3)
 		for(var i=0; i<pralinenZahl; i++){
 			var pralinen = ` 
 				<img src="../bilder/u27/praline_${rando(1, 8)}.png" style="top:${rando(40, 350)}px; left: ${rando(20, 200)}px; transform:  rotate(${rando(1, 355)}deg);" alt="praline">`
+			
 			$(".u27 " + el).append(pralinen)
 		}
 		return pralinenZahl
 	}
-	var n = pralinen(".p1")-pralinen(".p2")
+	var n = 0
 
+	function restart(){
+		n = pralinen(".p1")-pralinen(".p2")
+		$(".zenter").html(`<img src="../bilder/u27/frage.jpg" alt="frage">`)
+	}
+	restart()
 	function pralinenControll(u){
-		if(u===){
-			$(".zenter").html(`<img src="../bilder/u27/wenig.jpg" alt="wenig">`)
+		if(u<0 && n<0){
+			$(".zenter").html(`<img src="../bilder/u27/wenig.jpg" alt="wenig">`)	
 		}
-		else if(n>0){
+		else if(u>0 && n>0){
 			$(".zenter").html(`<img src="../bilder/u27/mehr.jpg" alt="mehr">`)
 		}
-		else if(n===0){
-			$(".zenter .gleich").html(`<img src="../bilder/u27/gleich.jpg" alt="gleich">`)
+		else if(u==0 && n==0){
+			$(".zenter").html(`<img src="../bilder/u27/gleich.jpg" alt="gleich">`)
 		}
-		else{
+		else {
 			$(".zenter").html(`<p>не правильно</p>`)
 		}
+		setTimeout(restart, 2000)
 	}
 
 		$(".antwort .wenig").on("click", function(){
-			pralinenControll(false)
+			pralinenControll(-1)
 			
 		})
 		$(".antwort .gleich").on("click", function(){
@@ -91,7 +99,7 @@
 			
 		})
 		$(".antwort .mehr").on("click", function(){
-			pralinenControll(true)
+			pralinenControll(1)
 			
 		})
 
