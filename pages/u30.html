@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"> 
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u30">
+			<div class="verwaltung">
+				<p><span class="zeitP">Дата по возрастанию</span> <span class="zeitM">Дата по убыванию</span> <span class="preisP">Цена по возрастанию</span> <span class="preisM">Цена по убыванию</span> <span class="aquar">фильтр акварель</span> <span class="ol">фильтр масло</span></p>
+			</div>
+			<div class="brett">
+			</div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+	var root = $(".u30 .brett")
+
+	function templateCard(card){
+		return ` 
+			<div class="${card.class}">
+					<img src="${card.src}" alt="${card.alt}">
+					<p><span class="preis">${card.preis}</span><span class="waerung">€</span></p>
+				</div>
+		`
+	}
+function drawCard(arr){
+	root.html("")
+	arr.map(function(card){
+		root.append(templateCard(card))
+	})
+}
+drawCard(dataBilderU30)	
+
+	$(".zeitP").on("click", function(){
+		sound.play()
+		dataBilderU30.sort(function(a,b){
+			return new Date(a.datum) - new Date(b.datum)
+		})
+	drawCard(dataBilderU30)
+	})
+
+	$(".zeitM").on("click", function(){
+		sound.play()
+		dataBilderU30.sort(function(a,b){
+			return new Date(b.datum) - new Date(a.datum)
+		})
+	drawCard(dataBilderU30)
+	})
+	$(".preisP").on("click", function(){
+		sound.play()
+		dataBilderU30.sort(function(a,b){
+			return a.preis -b.preis
+		})
+	drawCard(dataBilderU30)
+	})
+	$(".preisM").on("click", function(){
+		sound.play()
+		dataBilderU30.sort(function(a,b){
+			return b.preis -a.preis
+		})
+	drawCard(dataBilderU30)
+	})
+	$(".aquar").on("click", function(){
+		sound.play()
+		var arr = dataBilderU30.filter(function(card){
+
+			if(/aquarell/.test(card.class)){
+				return true
+			}
+		})
+	drawCard(arr)
+	})
+
+	$(".ol").on("click", function(){
+		sound.play()
+		var arr = dataBilderU30.filter(function(card){
+
+			if(/ol/.test(card.class)){
+				return true
+			}
+		})
+	drawCard(arr)
+	})
+	
+</script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    }); 
+</script>
+</body>
+</html>

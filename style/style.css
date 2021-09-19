@@ -725,6 +725,25 @@ table.test_1 tr td, table.test_2 tr td {
   align-items: center; }
 
 /*----------------------/.u17--------------------------*/
+/*-----------------------.u18--------------------------*/
+.u18 {
+  width: 1000px;
+  height: 200px;
+  background-color: yellowgreen;
+  gap: 10px; }
+
+.u18 .fp {
+  width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u18 .fp p {
+  padding: 1px 5px 10px 5px; }
+
+/*----------------------/.u18--------------------------*/
 /*-----------------------.u19--------------------------*/
 .u19 {
   width: 960px;
@@ -1431,29 +1450,27 @@ table.test_1 tr td, table.test_2 tr td {
   justify-content: center;
   align-items: center; }
 
-/*
-.u28 .base .quadro.b1{
-	background-image: url("../bilder/u28/bar.jpg");
-}
+.u28 .base .quadro.b1 {
+  background-image: url("../bilder/u28/bar.jpg"); }
+
 .u28 .base .quadro.e3 {
-	background-image: url("../bilder/u28/chick.jpg");
-}
+  background-image: url("../bilder/u28/chick.jpg"); }
+
 .u28 .base .quadro.c5 {
-	background-image: url("../bilder/u28/entlein.jpg");
-}
+  background-image: url("../bilder/u28/entlein.jpg"); }
+
 .u28 .base .quadro.a4 {
-	background-image: url("../bilder/u28/fisch.jpg");
-}
+  background-image: url("../bilder/u28/fisch.jpg"); }
+
 .u28 .base .quadro.b4 {
-	background-image: url("../bilder/u28/kater.jpg");
-}
+  background-image: url("../bilder/u28/kater.jpg"); }
+
 .u28 .base .quadro.d2 {
-	background-image: url("../bilder/u28/krokodil.jpg");
-}
+  background-image: url("../bilder/u28/krokodil.jpg"); }
+
 .u28 .base .quadro.c3 {
-	background-image: url("../bilder/u28/tasseKafee.jpg");
-}
-*/
+  background-image: url("../bilder/u28/tasseKafee.jpg"); }
+
 .u28 .tasten {
   width: 200px;
   height: 520px;
@@ -1500,4 +1517,294 @@ table.test_1 tr td, table.test_2 tr td {
   background-image: url("../bilder/u28/tasseKafee.jpg"); }
 
 /*-----------------------/.u28--------------------------*/
+/*------------------------.u29--------------------------*/
+.u29 {
+  width: 1000px;
+  padding: 20px;
+  margin: 60px auto;
+  background-color: SeaGreen;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u29 .verwaltung {
+  width: 1000px;
+  padding: 10px 20px;
+  margin: auto;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u29 .verwaltung p span {
+  padding: 10px 20px;
+  color: white;
+  background-color: rgba(250, 250, 250, 0.3);
+  border: 1px solid white;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.4s ease-out; }
+
+.u29 .verwaltung p span:hover {
+  border-radius: 30px;
+  background-color: rgba(250, 250, 250, 0.5); }
+
+.u29 .brett {
+  width: 1000px;
+  height: 200px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  color: white;
+  box-sizing: border-box;
+  font-family: 'Kalam', cursive;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; }
+
+/*-----------------------/.u29--------------------------*/
+/*------------------------.u30--------------------------*/
+.u30 {
+  width: 1000px;
+  padding: 20px;
+  margin: 60px auto;
+  background-color: rgba(150, 150, 150, 0.1);
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u30 .verwaltung {
+  width: 1000px;
+  height: 110px;
+  padding: 10px 20px;
+  margin: auto;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u30 .verwaltung p span {
+  padding: 10px 20px;
+  line-height: 45px;
+  color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(150, 150, 150, 0.3);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.4s ease-out; }
+
+.u30 .verwaltung p span:hover {
+  border-radius: 30px;
+  background-color: rgba(150, 150, 150, 0.5); }
+
+.u30 .brett {
+  width: 1000px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  color: white;
+  box-sizing: border-box;
+  font-size: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u30 .brett img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.u30 .brett .bild {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative; }
+
+.u30 .brett .bild p {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 22px;
+  background-color: rgba(250, 250, 250, 0.5);
+  color: red;
+  position: absolute;
+  top: 220px;
+  left: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*-----------------------/.u30--------------------------*/
+/*------------------------.u31--------------------------*/
+.red {
+  background-color: red; }
+
+.green {
+  background-color: green; }
+
+.blue {
+  background-color: blue; }
+
+.yellow {
+  background-color: orange; }
+
+.aqua {
+  background-color: LightSkyBlue; }
+
+.brown {
+  background-color: brown; }
+
+.u31 {
+  width: 700px;
+  height: 600px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: #f0fef0;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u31 .info {
+  width: 610px;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u31 .info p {
+  color: #0f5756;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u31 .piramidchen {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #3da676;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; }
+
+.u31 .piramidchen .quadrat {
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border: 1px solid #3da676;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.u31 .piramidchen .quadrat:hover {
+  background-color: black; }
+
+.u31 .piramidchen .a {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3da676;
+  border-radius: 10px;
+  box-sizing: border-box; }
+
+.u31 .piramidchen .b {
+  width: 50px;
+  height: 20px;
+  border: 1px solid #3da676;
+  border-radius: 10px;
+  box-sizing: border-box; }
+
+.u31 .piramidchen .c {
+  width: 80px;
+  height: 20px;
+  border: 1px solid #3da676;
+  border-radius: 10px;
+  box-sizing: border-box; }
+
+.u31 .pvOben {
+  width: 100px;
+  height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u31 .pvOben .quadrat {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border: 1px solid #3da676;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.u31 .pvOben .quadrat:hover {
+  background-color: black; }
+
+.u31 .pvOben .quadrat .c {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #3da676;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.u31 .pvOben .quadrat .b {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #3da676;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.u31 .pvOben .quadrat .a {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3da676;
+  border-radius: 50%;
+  box-sizing: border-box; }
+
+/*-----------------------/.u31--------------------------*/
 /*@import "media";*/

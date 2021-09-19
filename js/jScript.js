@@ -91,7 +91,7 @@ var dataNavi = [
 	},
 	{
 		href: "u18",
-		thema: "Перебор массивов и объектов",
+		thema: "Семья",
 		title: "Урок 18"
 	},
 	{
@@ -143,6 +143,21 @@ var dataNavi = [
 		href: "u28",
 		thema: "Найди координаты",
 		title: "Урок 28"
+	},
+	{
+		href: "u29",
+		thema: "Сортировка",
+		title: "Урок 29"
+	},
+	{
+		href: "u30",
+		thema: "Сортировка картин",
+		title: "Урок 30"
+	},
+	{
+		href: "u31",
+		thema: "Пирамидки",
+		title: "Урок 31"
 	}
 
 ]
@@ -239,6 +254,78 @@ $(".naviGross ul").on("click", ".navi-item a", function(event){
 
 
 
+	var dataBilderU30 = [
+		{
+			class: "bild naturmort aquarell",
+			src: "../bilder/u30/bild_1.jpg",
+			alt: "Apfel",
+			datum: "01/10/2019",
+			preis: 35
+		},
+		{
+			class: "bild landschaft aquarell",
+			src: "../bilder/u30/bild_2.jpg",
+			alt: "Meer",
+			datum: "02/05/2019",
+			preis: 40
+		},
+		{
+			class: "bild naturmort aquarell",
+			src: "../bilder/u30/bild_3.jpg",
+			alt: "Wassermelone",
+			datum: "02/11/2019",
+			preis: 20
+		},
+		{
+			class: "bild naturmort ol",
+			src: "../bilder/u30/bild_4.jpg",
+			alt: "Kirschen",
+			datum: "02/12/2019",
+			preis: 150
+		},
+		{
+			class: "bild naturmort ol",
+			src: "../bilder/u30/bild_5.jpg",
+			alt: "Kirschen",
+			datum: "02/20/2019",
+			preis: 155
+		},
+		{
+			class: "bild naturmort aquarell",
+			src: "../bilder/u30/bild_6.jpg",
+			alt: "Apfel",
+			datum: "03/05/2019",
+			preis: 30
+		},
+		{
+			class: "bild naturmort ol",
+			src: "../bilder/u30/bild_7.jpg",
+			alt: "Granatapfel",
+			datum: "04/10/2020",
+			preis: 190
+		},
+		{
+			class: "bild naturmort ol",
+			src: "../bilder/u30/bild_8.jpg",
+			alt: "Birnen",
+			datum: "05/28/2021",
+			preis: 110
+		},
+		{
+			class: "bild naturmort ol",
+			src: "../bilder/u30/bild_9.jpg",
+			alt: "Apfel",
+			datum: "06/15/2020",
+			preis: 120
+		},
+		{
+			class: "bild landschaft aquarell",
+			src: "../bilder/u30/bild_10.jpg",
+			alt: "Meer",
+			datum: "06/10/2019",
+			preis: 45
+		}
+	]
 function addLogo (){
 var template = 
 `<!--?xml version="1.0" encoding="UTF-8"?-->
