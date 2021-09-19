@@ -1807,4 +1807,42 @@ table.test_1 tr td, table.test_2 tr td {
   box-sizing: border-box; }
 
 /*-----------------------/.u31--------------------------*/
+/*------------------------.u32--------------------------*/
+.u32 {
+  width: 640px;
+  height: 640px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: white;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u32 .figuren {
+  width: 600px;
+  height: 600px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u32 .figuren .figure {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px  solid gray;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*-----------------------/.u32--------------------------*/
 /*@import "media";*/

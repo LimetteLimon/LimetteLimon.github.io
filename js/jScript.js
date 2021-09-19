@@ -158,6 +158,11 @@ var dataNavi = [
 		href: "u31",
 		thema: "Пирамидки",
 		title: "Урок 31"
+	},
+	{
+		href: "u32",
+		thema: "Найди одинаковые фигуры",
+		title: "Урок 32"
 	}
 
 ]
@@ -326,6 +331,30 @@ $(".naviGross ul").on("click", ".navi-item a", function(event){
 			preis: 45
 		}
 	]
+function svgTPL(objTPL){
+	return ` <div class="figure">
+	<svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+width="100%" height="100%" viewBox="0 0 100 100">
+ <title>SpielItem</title>
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .black {fill:black; stroke:none;}
+	.white {fill:white; stroke:black; stroke-width:1;}
+   ]]>
+  </style>
+	
+ </defs>
+ <circle class="black" transform="translate(50, 50)" cx="25" cy="25" r="19"/>
+ <rect class="white" transform="translate(50, 0) rotate(45 25 25)" width="30" height="30" x="10" y="10"/>
+ <circle class="white" transform="translate(0, 50)" cx="25" cy="25" r="19"/>
+ <polygon  class="black" transform="rotate(45 25 25)" points="25 5, 45 40, 5 40, 25 5"/>
+ </svg>
+ </div>
+`
+}
+
+
 function addLogo (){
 var template = 
 `<!--?xml version="1.0" encoding="UTF-8"?-->
