@@ -345,10 +345,7 @@ width="100%" height="100%" viewBox="0 0 100 100">
   </style>
 	
  </defs>
- <circle class="black" transform="translate(50, 50)" cx="25" cy="25" r="19"/>
- <rect class="white" transform="translate(50, 0) rotate(45 25 25)" width="30" height="30" x="10" y="10"/>
- <circle class="white" transform="translate(0, 50)" cx="25" cy="25" r="19"/>
- <polygon  class="black" transform="rotate(45 25 25)" points="25 5, 45 40, 5 40, 25 5"/>
+ ${objTPL}
  </svg>
  </div>
 `

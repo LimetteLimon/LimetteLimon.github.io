@@ -85,16 +85,18 @@
 	}
 	
 	levelDraw()
+
 	$(".num p").on("click", function(){
 		setTimeout(levelDraw, 500)
 		var n = Number($(this).html())
 		$(".text p").html(n)
 		if(n==woroniLength){
 			alert("правильный ответ "+n)
+			$(".text p").html("")
 		}
-		else{alert("ответ неправильный")}
-			console.log(n,"n")
-			console.log(woroniLength,"woroniLength")
+		else{alert("ответ неправильный")
+			$(".text p").html("")
+		}
 	})
 
 </script>

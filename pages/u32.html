@@ -38,16 +38,59 @@
 		<h1></h1>
 		
 		<div class="unterricht u32">
+
 			<div class="figuren"> </div>
+			<div class="tasten">
+				<button class="reset">обновить</button>
+				<div class="current"></div>
+			</div>
 		</div>
 
 	</main>
 <script src="../js/jScript.js"></script>
 <script>
-	
-for(var i=0; i<100; i++){
-	$(".u32 .figuren").append(svgTPL())
+
+function getFiguren(){
+	var translate = ["50, 50", "50, 0", "0, 50", "0, 0"]//.sort((a,b)=>0.5-Math.random())
+	var color = ["black", "white", "black", "white"].sort((a,b)=>0.5-Math.random())
+	var rotate = ["0", "45"]//.sort((a,b)=>0.5-Math.random())
+
+	return ` 
+		<circle class="${color[0]}" transform="translate(${translate[0]})" cx="25" cy="25" r="19"/>
+		<rect class="${color[1]}" transform="translate(${translate[1]}) rotate(${rotate[0]} 25 25)" width="30" height="30" x="10" y="10"/>
+		<circle class="${color[2]}" transform="translate(${translate[2]})" cx="25" cy="25" r="19"/>
+		<polygon  class="${color[3]}" transform="translate(${translate[3]}) rotate(${rotate[1]} 25 25)" points="25 5, 45 40, 5 40, 25 5"/>
+	`
 }
+function reset(){
+	$(".u32 .figuren").html("")
+	for(var i=0; i<100; i++){
+		$(".u32 .figuren").append(svgTPL(getFiguren()))
+	}
+
+}
+reset()
+$(".reset").on("click", reset)
+
+var currentElement = null
+var currentElementArr = []
+function controle(e){
+	let a = $(this).html()
+	
+	if(currentElement === a){
+		currentElementArr.push(1)
+		
+	}
+	else{
+		currentElement = a
+	}
+	console.log(currentElementArr.length)
+	$(".tasten .current").html(currentElement)
+}
+
+$(".figuren").on("click", ".figure", controle)
+	
+
 	
 </script>
 <!-- 

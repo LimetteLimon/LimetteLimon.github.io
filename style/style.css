@@ -1809,17 +1809,37 @@ table.test_1 tr td, table.test_2 tr td {
 /*-----------------------/.u31--------------------------*/
 /*------------------------.u32--------------------------*/
 .u32 {
-  width: 640px;
+  width: 900px;
   height: 640px;
   padding: 20px;
   margin: 30px auto;
   background-color: white;
   margin-bottom: 30px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px; }
+
+.u32 .tasten {
+  width: 150px;
+  height: 600px;
+  padding: 20px;
+  border: 1px solid gray; }
+
+.u32 .tasten button {
+  width: 150px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s; }
+
+.u32 .tasten button:hover {
+  background-color: black;
+  color: white; }
 
 .u32 .figuren {
   width: 600px;
@@ -1833,6 +1853,15 @@ table.test_1 tr td, table.test_2 tr td {
   align-items: center;
   gap: 10px; }
 
+.u32 .tasten .current {
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 10px; }
+
+.u32 .tasten .current svg {
+  border: 2px solid brown;
+  border-radius: 10px; }
+
 .u32 .figuren .figure {
   width: 50px;
   height: 50px;
@@ -1840,9 +1869,15 @@ table.test_1 tr td, table.test_2 tr td {
   border: 1px  solid gray;
   border-radius: 10px;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.u32 .figuren .figure:hover {
+  background-color: gray;
+  border: 2px  solid black; }
 
 /*-----------------------/.u32--------------------------*/
 /*@import "media";*/
