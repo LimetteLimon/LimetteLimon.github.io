@@ -1853,6 +1853,16 @@ table.test_1 tr td, table.test_2 tr td {
   align-items: center;
   gap: 10px; }
 
+.u32 .figuren .checked {
+  border: 1px solid red !important;
+  background-color: orange !important;
+  opacity: 0.5; }
+
+html body .u32 .figuren .notAcive {
+  border: 1px solid red !important;
+  background-color: gray !important;
+  opacity: 0.2; }
+
 .u32 .tasten .current {
   background-color: white;
   margin-top: 10px;

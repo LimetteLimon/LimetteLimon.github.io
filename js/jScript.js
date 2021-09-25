@@ -331,7 +331,8 @@ $(".naviGross ul").on("click", ".navi-item a", function(event){
 			preis: 45
 		}
 	]
-function svgTPL(objTPL){
+function svgTPL(figuren){
+    var {color, translate, rotate} = figuren
 	return ` <div class="figure">
 	<svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
 width="100%" height="100%" viewBox="0 0 100 100">
@@ -345,7 +346,10 @@ width="100%" height="100%" viewBox="0 0 100 100">
   </style>
 	
  </defs>
- ${objTPL}
+<circle class="${color[0]}" transform="translate(${translate[0]})" cx="25" cy="25" r="19"/>
+<rect class="${color[1]}" transform="translate(${translate[1]}) rotate(${rotate[0]} 25 25)" width="30" height="30" x="10" y="10"/>
+<circle class="${color[2]}" transform="translate(${translate[2]})" cx="25" cy="25" r="19"/>
+<polygon  class="${color[3]}" transform="translate(${translate[3]}) rotate(${rotate[1]} 25 25)" points="25 5, 45 40, 5 40, 25 5"/>
  </svg>
  </div>
 `
