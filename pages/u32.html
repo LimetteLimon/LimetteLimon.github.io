@@ -53,8 +53,8 @@
 
 function getFiguren(){
 	return {
-		translate: ["50, 50", "50, 0", "0, 50", "0, 0"],//.sort((a,b)=>0.5-Math.random())
-		rotate: ["0", "45"],//.sort((a,b)=>0.5-Math.random())
+		translate: ["50, 50", "50, 0", "0, 50", "0, 0"].sort((a,b)=>0.5-Math.random()),
+		rotate: ["0", "45"].sort((a,b)=>0.5-Math.random()),
 		color: ["black", "white", "black", "white"].sort((a,b)=>0.5-Math.random())
 	}
 }

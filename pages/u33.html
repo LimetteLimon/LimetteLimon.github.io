@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"> 
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u33">
+			<div class="text"></div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+	var items = [
+		{
+			src: "klemme",
+			alt: "Büroklammer",
+			rAntwort: true
+		},
+		{
+			src: "radiergumi",
+			alt: "Radiergumi",
+			rAntwort: false
+		},
+		{
+			src: "uhr",
+			alt: "Handuhr",
+			rAntwort: false
+		}
+	]
+
+	function render(src, alt, rAntwort){
+		var containerTpl = ` 
+		<div class="container">
+			<img src="../bilder/u33/${src}.png" alt="${alt}" data-rAntwort="${rAntwort}">
+		</div>
+	 `
+		$(".u33").append(containerTpl)
+	}
+
+
+for(var i=0; i<items.length; i++){
+	render(items[i].src, items[i].alt, items[i].rAntwort)
+}
+
+$(".u33").on("click", ".container", function(){
+	var rAntwort = $(this).find("img").data("rantwort")
+	if(rAntwort === true){
+		$(".u33 .text").html("правильный ответ")
+	}
+	else{
+		$(".u33 .text").html("ответ неправильный")
+	}
+})
+
+/*
+	items.map(function(i){
+		render(i.src, i.alt, i.rAntwort)
+	})
+*/
+
+/*
+Array.prototype.for = function(callback){
+	for(var i=0; i<this.length; i++){
+		callback(this[i])
+	}
+}
+function callback(i){
+	render(i.src, i.alt, i.rAntwort)
+}
+items.for(callback)
+*/
+</script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    }); 
+</script>
+</body>
+</html>

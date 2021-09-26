@@ -1890,4 +1890,96 @@ html body .u32 .figuren .notAcive {
   border: 2px  solid black; }
 
 /*-----------------------/.u32--------------------------*/
+/*------------------------.u33--------------------------*/
+.u33 {
+  width: 940px;
+  height: 300px;
+  margin: 30px auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u33 .text {
+  width: 920px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid gray;
+  bottom: -50px;
+  left: 20px;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u33 .container {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u33 .container::before {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url("../bilder/u33/vordergrund.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100; }
+
+.u33 .container::after {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url("../bilder/u33/hintergrund.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+.u33 .container img {
+  width: 300px;
+  height: 300px;
+  z-index: 10; }
+
+/*------------------------/.u33--------------------------*/
+/*-------------------------.u34--------------------------*/
+.u34 {
+  width: 940px;
+  height: 500px;
+  margin: 30px auto;
+  background-color: white;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u34 .schara {
+  width: 940px;
+  height: 500px;
+  border: 1px solid gray;
+  margin: auto;
+  overflow: hidden;
+  position: relative; }
+
+.u34 .schara .schar {
+  position: absolute;
+  border-radius: 50%; }
+
+/*------------------------/.u34--------------------------*/
 /*@import "media";*/
