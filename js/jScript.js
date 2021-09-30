@@ -173,6 +173,11 @@ var dataNavi = [
 		href: "u34",
 		thema: "Шарики",
 		title: "Урок 34"
+	},
+	{
+		href: "u35",
+		thema: "Aquarium",
+		title: "Урок 35"
 	}
 
 ]
@@ -269,6 +274,52 @@ $(".naviGross ul").on("click", ".navi-item a", function(event){
 
 
 
+var aquariumTpl = ` 
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 700 700">
+<title>Aquarium</title>
+<desc>Aquarium für Logo</desc>
+
+<mask id="mask">
+	<circle cx="350" cy="350" r="300"  fill="rgba(100, 100, 100, .8)" />
+</mask>
+<g mask="url(#mask)">
+<rect x="0" y="0" width="700" height="700" fill="rgb(100, 100, 100)" />
+<g transform="translate(0, -350)">
+ <path id="wasser" fill="rgb(255, 255, 255)" d="M350 23c41,0 57,35 93,49 47,18 132,6 145,54 14,52 59,78 74,125 10,31 15,64 15,99 0,18 -26,40 -29,57 -5,32 10,59 -4,87 -18,36 -43,69 -73,97 -27,25 -64,21 -98,36 -39,17 -77,50 -123,50 -70,0 -137,-7 -184,-46 -29,-24 -44,-70 -66,-103 -20,-30 -57,-50 -72,-85 -11,-25 -5,-64 -5,-93 0,-47 -7,-105 28,-133 46,-37 83,-79 100,-127 24,-65 124,-67 199,-67z">
+	<animateTransform attributeName="transform"
+       attributeType="XML"
+       type="rotate"
+       from="0 350 350"
+       to="360 350 350"
+       dur="20s"
+       repeatCount="indefinite"/>
+</path>
+</g>
+<g transform="translate(150, -350)">
+ <path id="wasser" fill="rgb(255, 255, 255)" d="M350 23c41,0 57,35 93,49 47,18 132,6 145,54 14,52 59,78 74,125 10,31 15,64 15,99 0,18 -26,40 -29,57 -5,32 10,59 -4,87 -18,36 -43,69 -73,97 -27,25 -64,21 -98,36 -39,17 -77,50 -123,50 -70,0 -137,-7 -184,-46 -29,-24 -44,-70 -66,-103 -20,-30 -57,-50 -72,-85 -11,-25 -5,-64 -5,-93 0,-47 -7,-105 28,-133 46,-37 83,-79 100,-127 24,-65 124,-67 199,-67z">
+	<animateTransform attributeName="transform"
+       attributeType="XML"
+       type="rotate"
+       from="0 350 350"
+       to="360 350 350"
+       dur="20s"
+       repeatCount="indefinite"/>
+</path>
+</g>
+<g transform="translate(-150, -350)">
+ <path id="wasser" fill="rgb(255, 255, 255)" d="M350 23c41,0 57,35 93,49 47,18 132,6 145,54 14,52 59,78 74,125 10,31 15,64 15,99 0,18 -26,40 -29,57 -5,32 10,59 -4,87 -18,36 -43,69 -73,97 -27,25 -64,21 -98,36 -39,17 -77,50 -123,50 -70,0 -137,-7 -184,-46 -29,-24 -44,-70 -66,-103 -20,-30 -57,-50 -72,-85 -11,-25 -5,-64 -5,-93 0,-47 -7,-105 28,-133 46,-37 83,-79 100,-127 24,-65 124,-67 199,-67z">
+	<animateTransform attributeName="transform"
+       attributeType="XML"
+       type="rotate"
+       from="0 350 350"
+       to="360 350 350"
+       dur="20s"
+       repeatCount="indefinite"/>
+</path>
+</g>
+</g>
+</svg>
+	`
 	var dataBilderU30 = [
 		{
 			class: "bild naturmort aquarell",

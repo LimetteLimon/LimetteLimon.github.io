@@ -1982,4 +1982,40 @@ html body .u32 .figuren .notAcive {
   border-radius: 50%; }
 
 /*------------------------/.u34--------------------------*/
+/*-------------------------.u35--------------------------*/
+.u35 {
+  width: 500px;
+  height: 500px;
+  margin: 30px auto;
+  padding-bottom: 30px;
+  background-color: white;
+  margin-bottom: 30px;
+  position: relative; }
+
+.u35 .aquarium {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+
+.u35 .bulbi {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
+.u35 .bulba {
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  background-color: white; }
+
+/*------------------------/.u35--------------------------*/
 /*@import "media";*/
