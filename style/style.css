@@ -1986,7 +1986,7 @@ html body .u32 .figuren .notAcive {
 .u35 {
   width: 500px;
   height: 500px;
-  margin: 30px auto;
+  margin: 5px auto;
   padding-bottom: 30px;
   background-color: white;
   margin-bottom: 30px;
@@ -2018,4 +2018,58 @@ html body .u32 .figuren .notAcive {
   background-color: white; }
 
 /*------------------------/.u35--------------------------*/
+/*-------------------------.u36--------------------------*/
+.u36 {
+  width: 1050px;
+  height: 540px;
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid gray;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u36 .spiel {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u36 .spiel p {
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Indie Flower', cursive; }
+
+.u36 .grafik {
+  width: 500px;
+  height: 500px;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; }
+
+.u36 .grafik .g {
+  width: 32px;
+  height: 500px;
+  border: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px; }
+
+.u36 .grafik .g .punkt {
+  width: 32px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: green; }
+
+/*------------------------/.u36--------------------------*/
 /*@import "media";*/

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" href="../favicon.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"> 
+
+<script src="../js/lib.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+</head>
+<body>
+	<nav class="navi">
+		<div class="logo">
+			<a href="http://kodesource.top/jquery-exercises/1/index.php" target="_blank"></a>
+		</div>
+		<ul>
+			
+		</ul>
+	</nav>
+
+	<main>
+		
+		<h1></h1>
+		
+		<div class="unterricht u36">
+			<div class="spiel"></div>
+			<div class="grafik">
+				<div class="g g1">
+					
+				</div>
+				<div class="g g2"></div>
+				<div class="g g3"></div>
+				<div class="g g4"></div>
+				<div class="g g5"></div>
+				<div class="g g6"></div>
+				<div class="g g7"></div>
+				<div class="g g8"></div>
+				<div class="g g9"></div>
+				<div class="g g10"></div>
+				<div class="g g11"></div>
+				<div class="g g12"></div>
+			</div>
+		</div>
+
+	</main>
+<script src="../js/jScript.js"></script>
+<script>
+
+	$(".u36 .spiel").on("click", function(){
+		var zahl = rando(1, 12)
+		var textTpl = `<p>${zahl}</p>`
+		$(".u36 .spiel").html(textTpl)
+
+		$(`.u36 .grafik .g${zahl}`).append(`<div class="punkt"></div>`)
+	})
+
+</script>
+<script>
+    var sound = new Howl({
+      src: ['../audio/item.mp3'],
+      volume:0.3
+    }); 
+</script>
+</body>
+</html>

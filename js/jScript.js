@@ -176,8 +176,13 @@ var dataNavi = [
 	},
 	{
 		href: "u35",
-		thema: "Aquarium",
+		thema: "Аквариум",
 		title: "Урок 35"
+	},
+	{
+		href: "u36",
+		thema: "Игра с графиком",
+		title: "Урок 36"
 	}
 
 ]
