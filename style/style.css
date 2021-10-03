@@ -2072,4 +2072,102 @@ html body .u32 .figuren .notAcive {
   background-color: green; }
 
 /*------------------------/.u36--------------------------*/
+/*-------------------------.u37--------------------------*/
+.u37 {
+  width: 900px;
+  height: 600px;
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid gray;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u37 .container {
+  width: 900px;
+  height: 600px;
+  border: 1px solid gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; }
+
+.u37 .container .row {
+  width: 900px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u37 .container .row .bild {
+  width: 140px;
+  height: 140px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.u37 .container .row .plus,
+.u37 .container .row .gleich,
+.u37 .container .row .resalt {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Indie Flower', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u37 .container .row .antwort {
+  width: 100px;
+  height: 100px;
+  font-size: 90px;
+  font-weight: bold;
+  color: red;
+  font-family: 'Indie Flower', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*------------------------/.u37--------------------------*/
+/*-------------------------.u38--------------------------*/
+.u38 {
+  width: 500px;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u38 .busContainer {
+  width: 500px;
+  padding: 20px 5px 30px 5px;
+  background-color: gray;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.u38 .busContainer h3 {
+  width: 90%;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+  border-bottom: 3px solid white;
+  margin-bottom: 20px; }
+
+.u38 .busContainer p {
+  width: 90%;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+  text-transform: lowercase; }
+
+/*------------------------/.u38--------------------------*/
 /*@import "media";*/

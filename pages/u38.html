@@ -37,36 +37,31 @@
 		
 		<h1></h1>
 		
-		<div class="unterricht u36">
-			<div class="spiel"></div>
-			<div class="grafik">
-				<div class="g g1"></div>
-				<div class="g g2"></div>
-				<div class="g g3"></div>
-				<div class="g g4"></div>
-				<div class="g g5"></div>
-				<div class="g g6"></div>
-				<div class="g g7"></div>
-				<div class="g g8"></div>
-				<div class="g g9"></div>
-				<div class="g g10"></div>
-				<div class="g g11"></div>
-				<div class="g g12"></div>
+		<div class="unterricht u38">
+			<div class="busContainer">
+				<h3></h3>
+				<p></p>
 			</div>
 		</div>
 
 	</main>
 <script src="../js/jScript.js"></script>
 <script>
-
-	$(".u36 .spiel").on("click", function(){
-		var zahl = rando(1, 12)
-		var textTpl = `<p>${zahl}</p>`
-		$(".u36 .spiel").html(textTpl)
-
-		$(`.u36 .grafik .g${zahl}`).append(`<div class="punkt"></div>`)
-	})
-
+	var bus = "Bus"
+	var worte = [" Apfel ", " Birne ", " Tomate ", " Bilder "]
+	function drowText(){
+		$(".u38 .busContainer h3").html(bus)
+		for(var i=0; i<18; i++){
+			for(var j=0; j<rando(0,3); j++){
+				$(".u38 .busContainer p").append(worte[rando(0,3)])
+			}
+			$(".u38 .busContainer p").append(bus)
+			for(var n=0; n<rando(0,3); n++){
+				$(".u38 .busContainer p").append(worte[rando(0,3)])
+			}
+		}
+	}
+	drowText()
 </script>
 <script>
     var sound = new Howl({
