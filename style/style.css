@@ -2170,4 +2170,203 @@ html body .u32 .figuren .notAcive {
   text-transform: lowercase; }
 
 /*------------------------/.u38--------------------------*/
+/*-------------------------.u39--------------------------*/
+.u39 {
+  width: 650px;
+  height: 500px;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u39 .bilder {
+  width: 650px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px; }
+
+.u39 .bilder img {
+  height: 500px;
+  width: 108px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*------------------------/.u39--------------------------*/
+/*-------------------------.u40--------------------------*/
+.u40 {
+  width: 500px;
+  height: 500px;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  border: 1px solid gray;
+  position: relative; }
+
+.u40 .bild {
+  width: 400px;
+  height: 400px;
+  border: 1px solid gray;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.u40 .bild .fragment {
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+  background-color: #584b3b;
+  position: absolute;
+  cursor: pointer; }
+
+/*
+.u40 .bild .fragment.f1 {
+	top: 100px;
+	left: 100px;
+}
+.u40 .bild .fragment.f2 {
+	top: 200px;
+	left: 200px;
+}
+.u40 .bild .fragment.f3 {
+	top: 160px;
+	left: 50px;
+}
+.u40 .bild .fragment.f4 {
+	top: 60px;
+	left: 300px;
+}
+.u40 .bild .fragment.f5 {
+	top: 260px;
+	left: 50px;
+}
+.u40 .bild .fragment.f6 {
+	top: 300px;
+	left: 300px;
+}*/
+.u40 .tasten {
+  width: 500px;
+  height: 100px;
+  background-color: #584b3b;
+  position: absolute;
+  top: 400px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; }
+
+.u40 .tasten .taste {
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 400px 400px; }
+
+/*.u40 .tasten .taste.t1 {
+	background-position: top -100px left -100px;
+}
+.u40 .tasten .taste.t2 {
+	background-position: top -200px left -200px;
+}
+.u40 .tasten .taste.t3 {
+	background-position: top -160px left -50px;
+}
+.u40 .tasten .taste.t4 {
+	background-position: top -60px left -300px;
+}
+.u40 .tasten .taste.t5 {
+	background-position: top -260px left -50px;
+}
+.u40 .tasten .taste.t6 {
+	background-position: top -300px left -300px;
+}*/
+.u40 .ebenen {
+  width: 100px;
+  height: 400px;
+  background-color: #584b3b;
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u40 .ebenen .ebene {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid white;
+  background-color: #76171d;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u40 .ebenen .ebene.active {
+  background-color: red; }
+
+/*------------------------/.u40--------------------------*/
+/*-------------------------.u41--------------------------*/
+.u41 .container {
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; }
+
+.u41 .container .content {
+  width: 1000px;
+  height: 50px;
+  position: relative;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px; }
+
+.u41 .content:nth-child(odd) {
+  background-color: #c7edbc; }
+
+.u41 .content:nth-child(even) {
+  border: 1px solid gray; }
+
+.u41 .container .content input {
+  width: 42px;
+  height: 42px;
+  border: 5px solid green;
+  border-radius: 50%;
+  background-color: white;
+  color: green;
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive; }
+
+.u41 .container .content img {
+  width: 50px;
+  height: 50px; }
+
+/*------------------------/.u41--------------------------*/
 /*@import "media";*/
