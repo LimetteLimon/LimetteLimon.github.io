@@ -2376,6 +2376,9 @@ html body .u32 .figuren .notAcive {
   background-color: green;
   margin: 30px auto;
   margin-bottom: 30px;
+  background-image: url("../bilder/u42/blatt.svg");
+  background-repeat: no-repeat;
+  background-size: 1000px 500px;
   display: flex;
   justify-content: center;
   align-items: center; }
