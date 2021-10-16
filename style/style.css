@@ -2355,7 +2355,7 @@ html body .u32 .figuren .notAcive {
   border: 5px solid green;
   border-radius: 50%;
   background-color: white;
-  color: green;
+  color: gray;
   position: absolute;
   top: -2px;
   right: 0px;
@@ -2369,4 +2369,126 @@ html body .u32 .figuren .notAcive {
   height: 50px; }
 
 /*------------------------/.u41--------------------------*/
+/*-------------------------.u42--------------------------*/
+.u42 .container {
+  width: 1000px;
+  height: 500px;
+  background-color: green;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u42 .container .raupe {
+  width: 900px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; }
+
+.u42 .container .raupe .kopf {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 100px;
+  margin-right: -5px;
+  background-color: Chartreuse;
+  background-image: url("../bilder/u42/lippen.svg");
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u42 .container .raupe .kopf .auge_1 {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border: 10px solid white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 20;
+  top: 30px;
+  left: 60px; }
+
+.u42 .container .raupe .kopf .blick_1 {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 35;
+  top: 35px;
+  left: 30px; }
+
+.u42 .container .raupe .kopf .blick_2 {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 35;
+  top: 40px;
+  left: 70px; }
+
+.u42 .container .raupe .kopf .auge_2 {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border: 10px solid white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  left: 20px; }
+
+.u42 .container .raupe .bauch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; }
+
+.u42 .container .raupe .bauch .telo {
+  width: 100px;
+  height: 100px;
+  background-color: Chartreuse;
+  border-radius: 30%;
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+  color: #003300;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u42 .container .raupe .bauch .telo::before, .u42 .container .raupe .bauch .telo::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: Chartreuse;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 30;
+  top: 105px; }
+
+.u42 .container .raupe .bauch .telo::before {
+  left: 25px; }
+
+.u42 .container .raupe .bauch .telo::after {
+  left: 55px; }
+
+.u42 .container .raupe .schwanz {
+  width: 50px;
+  height: 50px;
+  background-color: Chartreuse;
+  border-radius: 50%;
+  margin-bottom: 80px;
+  margin-left: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*------------------------/.u42--------------------------*/
 /*@import "media";*/

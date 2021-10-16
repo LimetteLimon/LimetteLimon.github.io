@@ -37,70 +37,31 @@
 		
 		<h1></h1>
 		
-		<div class="unterricht u41">
+		<div class="unterricht u42">
 			<div class="container">
-				<div class="content c1"><input type="text"></div>
-				<div class="content c2"><input type="text"></div>
-				<div class="content c3"><input type="text"></div>
-				<div class="content c4"><input type="text"></div>
-				<div class="content c5"><input type="text"></div>
-				<div class="content c6"><input type="text"></div>
-				<div class="content c7"><input type="text"></div>
-				<div class="content c8"><input type="text"></div>
-				<div class="content c9"><input type="text"></div>
-				
+				<div class="raupe">
+					<div class="kopf">
+						<div class="auge_1"></div>
+						<div class="auge_2"></div>
+						<div class="blick_1"></div>
+						<div class="blick_2"></div>
+					</div>
+					<div class="bauch"></div>
+					<div class="schwanz"></div>
+				</div>
 			</div>
 		</div>
 
 	</main>
 <script src="../js/jScript.js"></script>
 <script>
-	var dinoCount = []
-	function dinoDraw(){	
-		for(var i=1; i<10; i++){
-			var dinoTpl = `<img src="../bilder/u41/bild_${i}.jpg" alt="динозавр">`
-			var adres = `.u41 .container .c${i}`
-			var zahl_1 = rando(1,17)
-			dinoCount.push(zahl_1)   
-			for(var j=0; j<zahl_1; j++){
-				$(adres).append(dinoTpl)
-			}
+	function raupeDraw(){
+		for(var i=1; i<7; i++){
+			var teloTpl = `<p class="telo t${i}">${i*10}</p>`
+			$(".u42 .container .raupe .bauch").append(teloTpl)
 		}
 	}
-	dinoDraw()
-	console.log(dinoCount)
-
-	//var zahl_2 = $(adres_2).html()
-	//var adres_2 = `.u41 .container .c${i} input`
-
-	$(".u41 .container input").on("change", function(){
-		var c = $(this).parent().attr("class")
-		var inputValue = $(this).val()
-		var row = c.split("content c")[1]
-		var zahlRichtig = dinoCount[row-1]
-
-		controll(zahlRichtig, +inputValue, this)
-	})
-
-	function controll(zahlRichtig, inputValue, elem){
-		if(zahlRichtig===inputValue){
-			$(elem).css("color", "green")
-		}
-		else{
-			$(elem).css("color", "red")
-		}
-		//$(elem).attr("disabled", "")
-		//$(elem).css("user-select", "none")
-
-	}
-
-	function reset(){
-		$(".u41 .container input").toArray().map(function(i){
-			$(i).val("")
-		})
-	}
-reset()
-	
+	raupeDraw()
 </script>
 <script>
     var sound = new Howl({
