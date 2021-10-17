@@ -2379,6 +2379,41 @@ html body .u32 .figuren .notAcive {
   background-image: url("../bilder/u42/blatt.svg");
   background-repeat: no-repeat;
   background-size: 1000px 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u42 .container .modal {
+  width: 1000px;
+  height: 500px;
+  background-color: rgba(100, 100, 100, 0.8);
+  position: absolute;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+
+.u42 .container .modal .info {
+  width: 500px;
+  height: 150px;
+  background-color: red;
+  position: absolute;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u42 .container .modal .info .bat {
+  width: 400px;
+  height: 100px;
+  color: red;
+  position: absolute;
+  z-index: 160;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -2457,6 +2492,11 @@ html body .u32 .figuren .notAcive {
   height: 100px;
   background-color: Chartreuse;
   border-radius: 30%;
+  cursor: move;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: relative;
   font-size: 60px;
   font-weight: bold;
@@ -2465,6 +2505,9 @@ html body .u32 .figuren .notAcive {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.sortable-ghost {
+  opacity: 0; }
 
 .u42 .container .raupe .bauch .telo::before, .u42 .container .raupe .bauch .telo::after {
   content: "";

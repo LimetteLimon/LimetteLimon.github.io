@@ -49,19 +49,68 @@
 					<div class="bauch"></div>
 					<div class="schwanz"></div>
 				</div>
+				<div class="modal">
+					<div class="info">
+						<button class="bat">а ещё раз правильно сыграть слабо?</button>
+					</div>
+				</div>
 			</div>
 		</div>
 
 	</main>
 <script src="../js/jScript.js"></script>
 <script>
+	var zahlen = []
 	function raupeDraw(){
+		zahlen = []
+		$(".u42 .container .raupe .bauch").html("")
 		for(var i=1; i<7; i++){
-			var teloTpl = `<p class="telo t${i}">${i*10}</p>`
+			var r = rando(1, 99)
+			zahlen.push(r)
+			var teloTpl = `<p class="telo t">${r}</p>`
 			$(".u42 .container .raupe .bauch").append(teloTpl)
 		}
 	}
 	raupeDraw()
+
+	function zahlenRichtig(){
+		var zahlenR = zahlen.sort(function(a,b){
+			return a-b
+		})
+		return zahlenR.join('')
+	}
+	
+
+	function raupeZahlen(){
+		var tela = $(".telo").toArray().map(function(p){
+			return $(p).html()
+		})
+		console.log(tela)
+		return tela.join('')
+	}
+
+
+	function control(){
+		if(zahlenRichtig()===raupeZahlen()){
+			$(".modal").css("display", "flex")
+			console.log(zahlenRichtig(), "правильно", raupeZahlen())
+		}
+	}
+
+	new Sortable(document.querySelector(".bauch"), {
+    swapThreshold: 1,
+    animation: 150,
+    dragClass: "t",
+    onEnd: function(){
+    	control()
+    }
+	});
+
+	$(".bat").on("click", function(){
+		raupeDraw()
+		$(".modal").css("display", "none")
+	})
+	
 </script>
 <script>
     var sound = new Howl({
