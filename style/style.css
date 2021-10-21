@@ -2537,4 +2537,108 @@ html body .u32 .figuren .notAcive {
   align-items: center; }
 
 /*------------------------/.u42--------------------------*/
+/*-------------------------.u43--------------------------*/
+.u43 .contentSmetterlink {
+  width: 500px;
+  height: 560px;
+  border: 1px solid gray;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u43 .contentSmetterlink .blockOben {
+  width: 500px;
+  height: 400px;
+  background-image: url("../bilder/u43/oben.jpg");
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u43 .contentSmetterlink .blockOben .kl {
+  width: 90px;
+  height: 110px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  background-color: yellowgreen;
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+  color: #003300;
+  cursor: move;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u43 .contentSmetterlink .blockOben .kl.kl_1 {
+  top: 96px;
+  left: 28px; }
+
+.u43 .contentSmetterlink .blockOben .kl.kl_2 {
+  top: 27px;
+  left: 204px; }
+
+.u43 .contentSmetterlink .blockOben .kl.kl_3 {
+  top: 96px;
+  left: 382px; }
+
+.u43 .contentSmetterlink .blockOben .kl.kl_4 {
+  top: 259px;
+  left: 296px; }
+
+.u43 .contentSmetterlink .blockOben .kl.kl_5 {
+  top: 259px;
+  left: 114px; }
+
+.u43 .contentSmetterlink .blockUnten {
+  width: 500px;
+  height: 150px;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; }
+
+.u43 .contentSmetterlink .blockUnten .block {
+  width: 90px;
+  height: 110px;
+  border-radius: 10px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 10px;
+  cursor: move;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u43 .contentSmetterlink .blockUnten .block.schmeterlink {
+  background-image: url("../bilder/u43/schmeterlink.jpg"); }
+
+.u43 .contentSmetterlink .blockUnten .block.raupe {
+  background-image: url("../bilder/u43/raupe.jpg"); }
+
+.u43 .contentSmetterlink .blockUnten .block.puppe {
+  background-image: url("../bilder/u43/puppe.jpg"); }
+
+.u43 .contentSmetterlink .blockUnten .block.eier {
+  background-image: url("../bilder/u43/eier.jpg"); }
+
+.u43 .contentSmetterlink .blockUnten .block.schmetterlingserwachen {
+  background-image: url("../bilder/u43/schmetterlingserwachen.jpg"); }
+
+/*------------------------/.u43--------------------------*/
 /*@import "media";*/
