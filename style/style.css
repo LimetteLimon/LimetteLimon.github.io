@@ -2612,7 +2612,7 @@ html body .u32 .figuren .notAcive {
   align-items: center;
   gap: 5px; }
 
-.u43 .contentSmetterlink .blockUnten .block {
+.u43 .contentSmetterlink .block {
   width: 90px;
   height: 110px;
   border-radius: 10px;
@@ -2625,20 +2625,97 @@ html body .u32 .figuren .notAcive {
   justify-content: center;
   align-items: center; }
 
-.u43 .contentSmetterlink .blockUnten .block.schmeterlink {
+.u43 .contentSmetterlink .block.schmeterlink {
   background-image: url("../bilder/u43/schmeterlink.jpg"); }
 
-.u43 .contentSmetterlink .blockUnten .block.raupe {
+.u43 .contentSmetterlink .block.raupe {
   background-image: url("../bilder/u43/raupe.jpg"); }
 
-.u43 .contentSmetterlink .blockUnten .block.puppe {
+.u43 .contentSmetterlink .block.puppe {
   background-image: url("../bilder/u43/puppe.jpg"); }
 
-.u43 .contentSmetterlink .blockUnten .block.eier {
+.u43 .contentSmetterlink .block.eier {
   background-image: url("../bilder/u43/eier.jpg"); }
 
-.u43 .contentSmetterlink .blockUnten .block.schmetterlingserwachen {
+.u43 .contentSmetterlink .block.schmetterlingserwachen {
   background-image: url("../bilder/u43/schmetterlingserwachen.jpg"); }
 
 /*------------------------/.u43--------------------------*/
+/*-------------------------.u44--------------------------*/
+.u44 .container {
+  width: 800px;
+  overflow: hidden;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+
+.u44 .container .modal {
+  width: 800px;
+  height: 550px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(100, 100, 100, 0.5);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+
+.u44 .container .modal .nachricht {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.u44 .container .tire, .u44 .container .schatten {
+  width: 800px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; }
+
+.u44 .container .tire {
+  background-color: gold; }
+
+.u44 .container .schatten {
+  background-color: yellowgreen; }
+
+.u44 .container .tire img, .u44 .container .schatten img {
+  width: 200px;
+  height: 200px;
+  cursor: move; }
+
+/*------------------------/.u44--------------------------*/
+/*-------------------------.u45--------------------------*/
+.u45 .bildContainer {
+  width: 615px;
+  height: 615px;
+  border: 1px solid Silver;
+  margin: 30px auto;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3px; }
+
+/*------------------------/.u45--------------------------*/
 /*@import "media";*/

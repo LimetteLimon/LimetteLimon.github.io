@@ -47,11 +47,11 @@
 					<div class="kl kl_5">5</div>
 				</div>
 				<div class="blockUnten">
-					<div class="block raupe"></div>
-					<div class="block puppe"></div>
-					<div class="block schmeterlink"></div>
-					<div class="block eier"></div>
-					<div class="block schmetterlingserwachen"></div>
+					<div class="block"></div>
+					<div class="block"></div>
+					<div class="block"></div>
+					<div class="block"></div>
+					<div class="block"></div>
 				</div>
 			</div>
 		</div>
@@ -59,7 +59,58 @@
 	</main>
 <script src="../js/jScript.js"></script>
 <script>
-	
+	var lebenslauf = ["schmeterlink", "eier", "raupe", "puppe", "schmetterlingserwachen"]
+	function portret(){
+		var blocks = $(".block").toArray()
+		for(var i=0; i<lebenslauf.length; i++){
+			$(blocks[i]).addClass(lebenslauf[i])
+		}
+	}
+	portret()
+
+	new Sortable(document.querySelector(".kl_1"), {
+    group: {
+        name: 'kl_1',
+        pull: 'blockUnten' // To clone: set pull to 'clone'
+    },
+    animation: 150
+});
+	new Sortable(document.querySelector(".kl_2"), {
+    group: {
+        name: 'kl_2',
+        pull: 'blockUnten' // To clone: set pull to 'clone'
+    },
+    animation: 150
+});
+	new Sortable(document.querySelector(".kl_3"), {
+    group: {
+        name: 'kl_3',
+        pull: 'blockUnten' // To clone: set pull to 'clone'
+    },
+    animation: 150
+});
+	new Sortable(document.querySelector(".kl_4"), {
+    group: {
+        name: 'kl_4',
+        pull: 'blockUnten' // To clone: set pull to 'clone'
+    },
+    animation: 150
+});
+	new Sortable(document.querySelector(".kl_5"), {
+    group: {
+        name: 'kl_5',
+        pull: 'blockUnten'
+    },
+    animation: 150
+});
+
+new Sortable(document.querySelector(".blockUnten"), {
+    group: {
+        name: 'blockUnten',
+        put: ['kl_1', 'kl_2', 'kl_3', 'kl_4', 'kl_5']
+    },
+    animation: 150
+});
 </script>
 <script>
     var sound = new Howl({
