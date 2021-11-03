@@ -39,26 +39,57 @@
 		
 		<div class="unterricht u45">
 			<div class="bildContainer"></div>
+			<div class="modal">
+				<p class="slabo">А ещё раз правильно сыграть слабо?</p>
+			</div>
 		</div>
 
 	</main>
 <script src="../js/jScript.js"></script>
 <script>
+	var affen = []
 	function affeDraw(){
-		var affeTpl = ""
 		for(var i=1; i<7; i++){
 			for(var j=1; j<7; j++){
-				affeTpl = `<img src="../bilder/u45/row-${i}-column-${j}.png" alt="Affe">`
-				$(".u45 .bildContainer").append(affeTpl)
+				var affeTpl = `<img src="../bilder/u45/row-${i}-column-${j}.png" alt="Affe">`
+				affen.push(affeTpl)
 			}
 		}
+		var affenSort = affen
+		/*affenSort.sort(function(){
+			return 0.5 -Math.random()
+		})*/
+		affenSort.map(function(img){
+			$(".u45 .bildContainer").append(img)
+		})
 	}
 	affeDraw()
+
+	function controle(){
+		var gesorteAffen = $(".u45 .bildContainer img").toArray().map(function(img){
+			return $(img).attr("src")
+		}).join("")
+		var unGesorteAffen = affen.map(function(img){
+			return $(img).attr("src")
+		}).join("")
+		//console.log(gesorteAffen, unGesorteAffen)
+		if(unGesorteAffen===gesorteAffen){
+			$(".u45 .modal").css("display", "flex")
+		}
+	}
 	
 	new Sortable(document.querySelector(".bildContainer"), {
     	swapThreshold: 1,
     	animation: 150,
+    	onEnd: controle
 	});
+
+	$(".u45 .modal .slabo").on("click", function(){
+		$(".u45 .bildContainer").html("")
+		affen = []
+		affeDraw()
+		$(".u45 .modal").css("display", "none")
+	})
 </script>
 <script>
     var sound = new Howl({

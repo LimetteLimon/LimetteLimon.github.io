@@ -2717,5 +2717,47 @@ html body .u32 .figuren .notAcive {
   align-items: center;
   gap: 3px; }
 
+.u45 .bildContainer img {
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.u45 .bildContainer img:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing; }
+
+.u45 .modal {
+  width: 615px;
+  height: 615px;
+  border: 1px solid Silver;
+  background-color: rgba(150, 150, 150, 0.5);
+  margin: 30px auto;
+  margin-bottom: 30px;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3px; }
+
+.u45 .modal .slabo {
+  width: 450px;
+  height: 100px;
+  border: 1px solid Silver;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
 /*------------------------/.u45--------------------------*/
 /*@import "media";*/
