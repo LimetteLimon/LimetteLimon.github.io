@@ -235,7 +235,7 @@ var dataNavi = [
 
 let url = location.pathname
 function isHome(){
-	if("/" === url){
+	if("/jquery/" === url){
 		return true
 	}
 	else{
@@ -247,11 +247,11 @@ function navi(link, i){
 	let naviTempl = ""
 	if(isHome()){
 		naviTempl = `
-		<li class="navi-item"><a href="/pages/${link.href}.html" id="item_${i}">${link.title}</a></li>`
+		<li class="navi-item"><a href="/jquery/pages/${link.href}.html" id="item_${i}">${link.title}</a></li>`
 	}
 	else{
 		naviTempl = `
-		<li class="navi-item"><a href="/pages/${link.href}.html" id="item_${i}">${link.title}</a></li>`
+		<li class="navi-item"><a href="/jquery/pages/${link.href}.html" id="item_${i}">${link.title}</a></li>`
 	}
 	$(".navi ul").append(naviTempl);
 	$(".navi ul .navi-item").first().find('a').attr('href', '/')
@@ -272,7 +272,7 @@ function title(){
 		}
 	}
 	else{
-		let passName = url.split("/pages/")[1].split(".html")[0]
+		let passName = url.split("/jquery/pages/")[1].split(".html")[0]
 		if(link.href === passName){
 			$("h1").html(link.thema)
 			$("title").html(link.thema)
@@ -288,7 +288,7 @@ if(isHome()){
 function follMenu(){
 	dataNavi.map(function(link){
 	let naviTempl = `
-		<li class="navi-item"><a href="/pages/${link.href}.html">${link.title}: ${link.thema}</a></li>`
+		<li class="navi-item"><a href="/jquery/pages/${link.href}.html">${link.title}: ${link.thema}</a></li>`
 	$(".naviGross ul").append(naviTempl)
 	
 	})
