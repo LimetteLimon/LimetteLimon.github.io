@@ -1,0 +1,11 @@
+<svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+width="100%" height="100%" viewBox="0 0 50 50">
+ <title>Logo</title>
+ <g transform="rotate(0, 25, 25)">
+	<path id="quadro"
+     d="M 0,0 H 50 V 50 H 0 Z" style="fill:yellowgreen;" />
+  <path id="rect3719"
+     d="M 0,0 50,50 H 0 Z" style="fill:#2c3e50;" />
+ </g>
+  
+</svg>
